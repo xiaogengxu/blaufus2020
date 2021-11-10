@@ -32,7 +32,9 @@
 
     <br>
 
-    <button class="otree-btn-next btn btn-primary">Finish</button>
+    <input type="hidden" name="finished" value="" id="finished"/>
+    <input type="hidden" name="total_payoff" value="" id="payoff"/>
+    <button class="otree-btn-next btn btn-primary" onclick="NewTab()">{% blocktrans %}Finish{% endblocktrans %}</button>
 
     <br></br>
 
@@ -42,6 +44,14 @@
            <span class="sr-only">100% Complete</span>
        </div>
     </div>
+
+    <script>
+        function NewTab() {
+            window.open(js_vars.url, "_blank");
+            document.getElementById('finished').value = '1';
+            document.getElementById('payoff').value = {{ total1|json }};
+        }
+    </script>
 
     <style>
         .otree-title {

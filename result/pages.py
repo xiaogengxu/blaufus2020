@@ -7,14 +7,22 @@ from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from itertools import chain
 from .generic_pages import Page
+import time
+
+
+def get_timeout_seconds(player):
+    return player.participant.vars['expiry'] - time.time()
 
 
 class Result(Page):
     form_model = 'player'
+    form_fields = ['finished', 'total_payoff', 'total_time']
+    get_timeout_seconds = get_timeout_seconds
 
     def is_displayed(self):
-        if self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0:
-            return self.participant.vars['time_choice'] != 'delay0' and self.participant.vars['consent'] == 'yes'
+        if self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0 and \
+                self.participant.vars['consent'] == 'yes' and get_timeout_seconds(self.player) > 3:
+            return self.participant.vars['time_choice'] != 'delay0'
         else:
             return False
 
@@ -103,13 +111,26 @@ class Result(Page):
             'total1': total1
         }
 
+    def before_next_page(self):
+        self.participant.vars['finished'] = '1'
+        end_datetime = datetime.datetime.now()
+        start_time = self.participant.vars['start_time']
+        self.player.total_time = round((end_datetime - start_time).total_seconds())
+
+    def js_vars(self):
+        username_value = self.participant.label
+        return dict(url='https://survey.maximiles.com/complete?p=73953_ec88ce84&m='+username_value)
+
 
 class Result_nodelay(Page):
     form_model = 'player'
+    form_fields = ['finished', 'total_payoff', 'total_time']
+    get_timeout_seconds = get_timeout_seconds
 
     def is_displayed(self):
-        if self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0:
-            return self.participant.vars['time_choice'] == 'delay0' and self.participant.vars['consent'] == 'yes'
+        if self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0 and \
+                self.participant.vars['consent'] == 'yes' and get_timeout_seconds(self.player) > 3:
+            return self.participant.vars['time_choice'] == 'delay0'
         else:
             return False
 
@@ -179,5 +200,27 @@ class Result_nodelay(Page):
             'total': total
         }
 
+    def before_next_page(self):
+        self.participant.vars['finished'] = '1'
+        end_datetime = datetime.datetime.now()
+        start_time = self.participant.vars['start_time']
+        self.player.total_time = round((end_datetime - start_time).total_seconds())
 
-page_sequence = [Result, Result_nodelay]
+    def js_vars(self):
+        username_value = self.participant.label
+        return dict(url='https://survey.maximiles.com/complete?p=73953_ec88ce84&m='+username_value)
+
+
+class Timeout(Page):
+    form_model = 'player'
+
+    def is_displayed(self):
+        return self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0 and \
+               self.participant.vars['finished'] == '' and self.participant.vars['consent'] == 'yes'
+
+    def js_vars(self):
+        username_value = self.participant.label
+        return dict(url='https://survey.maximiles.com/quality?p=73953&m='+username_value)
+
+
+page_sequence = [Result, Result_nodelay, Timeout]

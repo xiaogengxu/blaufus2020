@@ -1,11 +1,15 @@
 from otree.api import Currency as c, currency_range
 from .models import Constants
 from ._builtin import Page as oTreePage, WaitPage
-import datetime
+import datetime, time
 from .generic_pages import Page
 from django.conf import settings
 from .generic_pages import Page
 from django.utils.translation import ugettext_lazy as _
+
+
+def get_timeout_seconds(player):
+    return player.participant.vars['expiry'] - time.time()
 
 
 class Info(Page):
@@ -14,7 +18,7 @@ class Info(Page):
 
     def is_displayed(self):
         return self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0 and \
-               self.participant.vars['consent'] == 'yes'
+               self.participant.vars['consent'] == 'yes' and get_timeout_seconds(self.player) > 3
 
     def error_message(self, values):
         if not values['birth_year'] or not values['gender'] or not values['education'] or not values['finance_ability'] \
@@ -32,7 +36,7 @@ class Risk_pref(Page):
 
     def is_displayed(self):
         return self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0 and \
-               self.participant.vars['consent'] == 'yes'
+               self.participant.vars['consent'] == 'yes' and get_timeout_seconds(self.player) > 3
 
     def error_message(self, values):
         if not values['check_risk_choice']:
@@ -53,7 +57,7 @@ class Time_pref(Page):
 
     def is_displayed(self):
         return self.participant.vars['time_instruction'] >= 30 and self.participant.vars['end'] == 0 and \
-               self.participant.vars['consent'] == 'yes'
+               self.participant.vars['consent'] == 'yes' and get_timeout_seconds(self.player) > 3
 
     def error_message(self, values):
         if not values['time_choice']:

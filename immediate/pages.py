@@ -5,6 +5,11 @@ from sympy.solvers import solve
 from sympy import Symbol
 from .generic_pages import Page
 from django.utils.translation import ugettext_lazy as _
+import time
+
+
+def get_timeout_seconds(player):
+    return player.participant.vars['expiry'] - time.time()
 
 
 class Start(Page):
@@ -12,7 +17,8 @@ class Start(Page):
 
     def is_displayed(self):
         return self.participant.vars['time_instruction'] >= 30 and self.player.round_number == 1 and \
-               self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes'
+               self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes' and \
+               get_timeout_seconds(self.player) > 3
 
 
 class Task(Page):
@@ -22,7 +28,8 @@ class Task(Page):
     def is_displayed(self):
         return self.participant.vars['time_instruction'] >= 30 and \
                (self.player.round_number < 11 or (self.player.round_number > 15 and self.player.round_number < 26)) and \
-               self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes'
+               self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes' and \
+               get_timeout_seconds(self.player) > 3
 
     def error_message(self, values):
         if not values['task_finished']:
@@ -56,7 +63,8 @@ class Decision1(Page):
 
     def is_displayed(self):
         return self.participant.vars['time_instruction'] >= 30 and self.player.round_number < 11 and \
-               self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes'
+               self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes' and \
+               get_timeout_seconds(self.player) > 3
 
     def error_message(self, values):
         if not values['check_imme1']:
@@ -134,7 +142,8 @@ class Decision2(Page):
 
     def is_displayed(self):
         return self.participant.vars['time_instruction'] >= 30 and (self.player.round_number > 15 and self.player.round_number < 26) \
-               and self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes'
+               and self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes' and \
+               get_timeout_seconds(self.player) > 3
 
     def error_message(self, values):
         if not values['check_imme2']:
@@ -215,7 +224,7 @@ class Rest1(Page):
     def is_displayed(self):
         return self.participant.vars['time_instruction'] >= 30 and \
                (self.player.round_number > 10 and self.player.round_number < 16) and self.participant.vars['end'] == 0 and \
-               self.participant.vars['consent'] == 'yes'
+               self.participant.vars['consent'] == 'yes' and get_timeout_seconds(self.player) > 3
 
     def vars_for_template(self):
         life = 1
@@ -278,7 +287,7 @@ class Rest2(Page):
     def is_displayed(self):
         return self.participant.vars['time_instruction'] >= 30 and \
                (self.player.round_number > 25 and self.player.round_number < 31) and self.participant.vars['end'] == 0 and \
-               self.participant.vars['consent'] == 'yes'
+               self.participant.vars['consent'] == 'yes' and get_timeout_seconds(self.player) > 3
 
     def vars_for_template(self):
         life = 2
@@ -341,7 +350,8 @@ class End(Page):
 
     def is_displayed(self):
         return self.participant.vars['time_instruction'] >= 30 and (self.player.round_number == 15 or self.player.round_number == 30 )\
-               and self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes'
+               and self.participant.vars['end'] == 0 and self.participant.vars['consent'] == 'yes' and \
+               get_timeout_seconds(self.player) > 3
 
     def vars_for_template(self):
         if self.player.round_number == 15:
