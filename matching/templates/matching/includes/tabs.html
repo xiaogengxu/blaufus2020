@@ -1,0 +1,135 @@
+{% load otree i18n %}
+
+<br>
+
+<div id="tab-area">
+
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Instruction')">{% blocktrans %}Instruction{% endblocktrans %}</button>
+    <button class="tablinks" onclick="openCity(event, 'Experiment')">{% blocktrans %}Experiment{% endblocktrans %}</button>
+    <button class="tablinks" onclick="openCity(event, 'Working')">{% blocktrans %}Working phase{% endblocktrans %}</button>
+    <button class="tablinks" onclick="openCity(event, 'Tax')">{% blocktrans %}Tax{% endblocktrans %}</button>
+    <button class="tablinks" onclick="openCity(event, 'Savings')">{% blocktrans %}Savings{% endblocktrans %}</button>
+    <button class="tablinks" onclick="openCity(event, 'Reward')">{% blocktrans %}Your reward{% endblocktrans %}</button>
+</div>
+
+<div id="Instruction" class="tabcontent">
+    <p>{% blocktrans %}Please click the other tabs to check the instruction if you want.{% endblocktrans %}</p>
+</div>
+
+<div id="Experiment" class="tabcontent">
+    <p>{% blocktrans %}In this experiment, you will decide how much to save during a simulated life.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Your life will have two phases: a working phase (10 periods) and a rest phase (5 periods).
+        In the working phase, you will work, earn income, and decide how much to save. In the rest phase, you will not earn any income.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}You will have two lives.{% endblocktrans %}</p>
+</div>
+
+<div id="Working" class="tabcontent">
+    <p>{% blocktrans %}At the beginning of each period of the <b>working phase</b>, you will work on a simple task.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}For each submitted task you will receive a fixed <b>Wage</b> of 480 points.{% endblocktrans %}</p>
+</div>
+
+<div id="Tax" class="tabcontent">
+    <p>{% blocktrans %}Your <b>Wage</b> will be subject to a Tax of 40%. The Tax will be deducted from your Wage.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Your <b>Net Wage</b> will be your Wage minus <b>Tax</b>.{% endblocktrans %}</p>
+</div>
+
+<div id="Savings" class="tabcontent">
+    <p>{% blocktrans %}Following the work task, at each working period,
+        you will decide how much of your <b>Net Wage</b> to put on <b>Savings</b> for the rest phase.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}You will receive a <b>bonus</b> of 66.67% over the amount saved.
+        For example, if you save 100 points, your bonus will be 67 points.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}All your <b>Savings</b> earn 5% interest per period.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}You will receive your <b>Savings</b> back during the <b>rest phase</b>.
+        The computer will automatically calculate equal <b>Withdraw</b> per each period of the rest phase.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of 40%.{% endblocktrans %}</p>
+</div>
+
+<div id="Reward" class="tabcontent">
+    <p>{% blocktrans %}In <b>working periods</b>,
+        your <b>Reward</b> will be the difference between your <b>Net Wage</b> and your <b>Savings</b>.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b> minus its <b>Tax</b> of 40%.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}In each period, your <b>Reward</b> will be automatically calculated.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}For your final Reward, the computer will randomly select one period of one of your two lives.
+        The <b>Reward</b> (in points) in that period will be exchanged for Euros at a rate of <b>&euro; 1.00 = 25 points</b>.{% endblocktrans %}</p>
+</div>
+
+</div>
+
+<br>
+
+<script>
+    function openCity(evt, cityName) {
+        event.preventDefault();
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    // document.getElementById("defaultOpen").click();
+</script>
+
+<style>
+    /* Style the tab */
+    #tab-area {
+        padding-left: 10px;
+    }
+
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 850px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        width: 850px;
+    }
+</style>

@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-10 21:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\deferred\pages.py:31
+msgid "Your sliders are not all set to target number "
+msgstr ""
+
+#: .\deferred\pages.py:32
+msgid ". Please, try again."
+msgstr ""
+
+#: .\deferred\pages.py:64 .\deferred\pages.py:150
+msgid "Please decide how much you would like to save."
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:60
+#: .\deferred\templates\deferred\Decision2.html:60
+#: .\deferred\templates\deferred\Rest1.html:46
+#: .\deferred\templates\deferred\Rest2.html:46
+msgid "Period"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:61
+#: .\deferred\templates\deferred\Decision2.html:61
+#: .\deferred\templates\deferred\Rest1.html:47
+#: .\deferred\templates\deferred\Rest2.html:47
+msgid ""
+"Wage\n"
+"                    (gross)"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:64
+#: .\deferred\templates\deferred\Decision2.html:64
+#: .\deferred\templates\deferred\Rest1.html:50
+#: .\deferred\templates\deferred\Rest2.html:50
+msgid "Your wage in points"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:68
+#: .\deferred\templates\deferred\Decision2.html:68
+#: .\deferred\templates\deferred\Rest1.html:54
+#: .\deferred\templates\deferred\Rest2.html:54
+#: .\deferred\templates\deferred\includes\tabs.html:11
+msgid "Tax"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:71
+#: .\deferred\templates\deferred\Decision2.html:71
+#: .\deferred\templates\deferred\Rest1.html:57
+#: .\deferred\templates\deferred\Rest2.html:57
+#, python-format
+msgid "40%% wage tax (in points) charged"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:75
+#: .\deferred\templates\deferred\Decision2.html:75
+#: .\deferred\templates\deferred\Rest1.html:61
+#: .\deferred\templates\deferred\Rest2.html:61
+msgid "Net Wage"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:78
+#: .\deferred\templates\deferred\Decision2.html:78
+#: .\deferred\templates\deferred\Rest1.html:64
+#: .\deferred\templates\deferred\Rest2.html:64
+msgid "Wage (gross) minus Tax"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:82
+#: .\deferred\templates\deferred\Decision2.html:82
+#: .\deferred\templates\deferred\Rest1.html:68
+#: .\deferred\templates\deferred\Rest2.html:68
+msgid "Savings Decision"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:85
+#: .\deferred\templates\deferred\Decision2.html:85
+#: .\deferred\templates\deferred\Rest1.html:71
+#: .\deferred\templates\deferred\Rest2.html:71
+msgid "Your savings decision (in points)"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:89
+#: .\deferred\templates\deferred\Decision2.html:89
+#: .\deferred\templates\deferred\Rest1.html:75
+#: .\deferred\templates\deferred\Rest2.html:75
+msgid "Tax refund"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:92
+#: .\deferred\templates\deferred\Decision2.html:92
+#: .\deferred\templates\deferred\Rest1.html:78
+#: .\deferred\templates\deferred\Rest2.html:78
+#, python-format
+msgid "refund (in points) given back to you (40%% of your Savings)"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:96
+#: .\deferred\templates\deferred\Decision2.html:96
+#: .\deferred\templates\deferred\Rest1.html:82
+#: .\deferred\templates\deferred\Rest2.html:82
+msgid "Payoff"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:99
+#: .\deferred\templates\deferred\Decision2.html:99
+#: .\deferred\templates\deferred\Rest1.html:85
+#: .\deferred\templates\deferred\Rest2.html:85
+msgid "Reward (in points) in the period. It is equal to Net Wage – Savings"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:103
+#: .\deferred\templates\deferred\Decision2.html:103
+#: .\deferred\templates\deferred\Rest1.html:89
+#: .\deferred\templates\deferred\Rest2.html:89
+msgid "Savings Balance"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:106
+#: .\deferred\templates\deferred\Decision2.html:106
+#: .\deferred\templates\deferred\Rest1.html:92
+#: .\deferred\templates\deferred\Rest2.html:92
+#, python-format
+msgid ""
+"Points you own at the end of the period in your Savings account. This "
+"balance earns 5%% interest at the end of each period (credited "
+"automatically)."
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:110
+#: .\deferred\templates\deferred\Decision2.html:110
+#: .\deferred\templates\deferred\Rest1.html:96
+#: .\deferred\templates\deferred\Rest2.html:96
+msgid "Withdraw"
+msgstr ""
+
+#: .\deferred\templates\deferred\Decision1.html:113
+#: .\deferred\templates\deferred\Decision2.html:113
+#: .\deferred\templates\deferred\Rest1.html:99
+#: .\deferred\templates\deferred\Rest2.html:99
+msgid "Points withdrawn from your Savings account during the rest phase."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:8
+msgid "Instruction"
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:9
+msgid "Experiment"
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:10
+msgid "Working phase"
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:12
+msgid "Savings"
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:13
+msgid "Your reward"
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:17
+msgid "Please click the other tabs to check the instruction if you want."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:21
+msgid ""
+"In this experiment, you will decide how much to save during a simulated life."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:23
+msgid ""
+"Your life will have two phases: a working phase (10 periods) and a rest "
+"phase (5 periods).\n"
+"        In the working phase, you will work, earn income, and decide how "
+"much to save. In the rest phase, you will not earn any income."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:26
+msgid "You will have two lives."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:30
+msgid ""
+"At the beginning of each period of the <b>working phase</b>, you will work "
+"on a simple task."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:32
+msgid ""
+"For each submitted task you will receive a fixed <b>Wage</b> of 480 points."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:36
+#, python-format
+msgid ""
+"Your <b>Wage</b> will be subject to a Tax of 40%%. The Tax will be deducted "
+"from your Wage."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:38
+msgid "Your <b>Net Wage</b> will be your Wage minus <b>Tax</b>."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:42
+msgid ""
+"Following the work task, at each working period,\n"
+"        you will decide how much of your <b>Net Wage</b> to put on "
+"<b>Savings</b> for the rest phase."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:45
+#, python-format
+msgid "Your <b>Savings</b> will earn 5%% interest per period."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:47
+#, python-format
+msgid ""
+"Since you do not pay taxes on Savings,\n"
+"        you will receive 40%% of the amount that you decide to save in each "
+"period as a <b>Refund</b>,\n"
+"        which will be added automatically to your <b>Reward</b> in each "
+"period.\n"
+"        For example, if you save 100 points in one period, you will receive "
+"40 points as a <b>Tax Refund</b> in that period."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:52
+msgid ""
+"You will receive your <b>Savings</b> including accumulated interest back "
+"during the <b>rest phase</b>.\n"
+"        The computer will automatically calculate equal <b>Withdraw</b> per "
+"each period of the rest phase."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:55
+#, python-format
+msgid ""
+"Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of 40%"
+"%."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:59
+msgid ""
+"In <b>working periods</b>,\n"
+"        your <b>Reward</b> will be the difference between your <b>Net Wage</"
+"b> and your <b>Savings</b>."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:62
+#, python-format
+msgid ""
+"In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b> "
+"minus its <b>Tax</b> of 40%%."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:64
+msgid "In each period, your <b>Reward</b> will be automatically calculated."
+msgstr ""
+
+#: .\deferred\templates\deferred\includes\tabs.html:66
+msgid ""
+"For your final Reward, the computer will randomly select one period of one "
+"of your two lives.\n"
+"        The <b>Reward</b> (in points) in that period will be exchanged for "
+"Euros at a rate of <b>&euro; 1.00 = 25 points</b>."
+msgstr ""

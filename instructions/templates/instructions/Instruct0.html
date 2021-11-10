@@ -1,0 +1,38 @@
+{% extends "instructions/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <h3>
+    <br>
+    The Financial Decision-Making Experiment
+    </h3>
+
+    <p>In this experiment, you will decide how much to save during a simulated life.</p>
+
+    <p>Your life will have two phases: a working phase (10 periods) and a rest phase (5 periods).
+        In the working phase, you will work, earn income, and decide how much to save.
+        In the rest phase, you will not earn any income.</p>
+
+    <p>You will have two lives.</p>
+
+    {% next_button %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:3%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+    </style>
+
+{% endblock %}
+
+

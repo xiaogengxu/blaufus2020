@@ -1,0 +1,83 @@
+{% extends "quiz/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <h6 class="alert-heading">{{ form.non_field_errors }}</h6>
+        </div>
+    {% endif %}
+
+    <h3><br>{% blocktrans %}Quiz: try again{% endblocktrans %}</h3>
+
+    <p>{% blocktrans %}Please answer correctly the question(s) again, before advancing to the live round.
+        There is a hint below.{% endblocktrans %}</p>
+
+    {% formfields %}
+
+    {% if show1 == 1 %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+        {% blocktrans %}Hint: <br>
+        Following the work task, at each working period,
+            you will decide how much of your <b>Net Wage</b> to put on <b>Savings</b> for the rest phase.{% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% if show2 == 1 %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+            {% blocktrans %}Hint: <br>
+            Your life will have two phases: a working phase (10 periods) and a rest phase (5 periods).
+                In the working phase, you will work, earn income, and decide how much to save.
+                In the rest phase, you will not earn any income.
+                No decision is made in the rest phase.{% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% if show3 == 1 %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+        {% blocktrans %}Hint: <br>
+        Your <b>Wage</b> will be subject to a Tax of 40%.
+            The Tax will be deducted from your Wage.{% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% if show4 == 1 %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+        {% blocktrans %}Hint: <br>
+        You will receive your <b>Savings</b> including accumulated interest back during the <b>rest phase</b>.{% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% if show5 == 1 %}
+        <p style="border:3px; border-style:solid; border-color: black; padding: 0.2em; border-radius: 3px">
+        {% blocktrans %}Hint: <br>
+        For your final Reward, the computer will randomly select one period of one of your two lives.
+            The <b>Reward</b> (in points) in that period will be exchanged for Euros at a rate of <b>&euro; 1.00 = 25 points</b>.{% endblocktrans %}</p>
+        <br>
+    {% endif %}
+
+    {% next_button %}
+
+    <br>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="11"
+            aria-valuemin="0" aria-valuemax="100" style="width:41%">
+            <span class="sr-only">11% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+    </style>
+
+{% endblock %}

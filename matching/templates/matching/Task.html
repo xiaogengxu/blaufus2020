@@ -1,0 +1,237 @@
+{% extends "matching/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <head>
+        <link href="{% static 'nouislider.min.css' %}" rel="stylesheet">
+        <script src="{% static 'wNumb.min.js' %}"></script>
+        <script src="{% static 'nouislider.min.js' %}"></script>
+    </head>
+
+    <h3>
+    <br>
+    life {{ life }}: Period {{ round_num_title }}/15 (working phase)
+    </h3>
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <h6 class="alert-heading">{{ form.non_field_errors }}</h6>
+        </div>
+    {% endif %}
+
+    <p>Set all five sliders below to number {{ slide_moveto }}.
+        Once you correctly positioned all sliders, click on "Submit" to collect your <b>Wage</b>.</p>
+
+    <input type="hidden" value="" id="myRange_spend1"/>
+    <input type="hidden" value="" id="myRange_spend2"/>
+    <input type="hidden" value="" id="myRange_spend3"/>
+
+    <input type="hidden" name="task_finished" value="" id="check"/>
+
+    <div id="div1"><b><span id="result1" style="display: inline-block"></span></b>
+        <div type="range" class="noUiSlider" id="slider1" style="display: inline-block"></div></div>
+    <br>
+
+    <div id="div2"><b><span id="result2" style="display: inline-block"></span></b>
+        <div type="range" class="noUiSlider" id="slider2" style="display: inline-block"></div></div>
+    <br>
+
+    <div id="div3"><b><span id="result3" style="display: inline-block"></span></b>
+        <div type="range" class="noUiSlider" id="slider3" style="display: inline-block"></div></div>
+    <br><br>
+
+    <button class="otree-btn-next btn btn-primary" id="btn1" onclick="myFunction()">Submit</button>
+
+    <br><br>
+    {% include 'matching/includes/tabs.html' %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{ round_num_bar }}%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <script>
+        var slider1 = document.getElementById('slider1');
+        var spend_output1 = document.getElementById('myRange_spend1');
+        var sliderValue1 = document.getElementById('result1');
+
+        var slider2 = document.getElementById('slider2');
+        var spend_output2 = document.getElementById('myRange_spend2');
+        var sliderValue2 = document.getElementById('result2');
+
+        var slider3 = document.getElementById('slider3');
+        var spend_output3 = document.getElementById('myRange_spend3');
+        var sliderValue3 = document.getElementById('result3');
+
+        // Initializing the sliders
+        noUiSlider.create(slider1, {
+        start: 0,
+        step: 1,
+        tooltips: wNumb({decimals: 0}),
+        format: wNumb({decimals: 0}),
+        // Disable animation on value-setting,
+        // so the sliders respond immediately.
+        animate: false,
+        range: {
+            'min': 0,
+            'max': 50
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 50],
+            density: 100
+        }
+        });
+
+        noUiSlider.create(slider2, {
+        start: 0,
+        step: 1,
+        tooltips: wNumb({decimals: 0}),
+        format: wNumb({decimals: 0}),
+        // Disable animation on value-setting,
+        // so the sliders respond immediately.
+        animate: false,
+        range: {
+            'min': 0,
+            'max': 50
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 50],
+            density: 100
+        }
+        });
+
+        noUiSlider.create(slider3, {
+        start: 0,
+        step: 1,
+        tooltips: wNumb({decimals: 0}),
+        format: wNumb({decimals: 0}),
+        // Disable animation on value-setting,
+        // so the sliders respond immediately.
+        animate: false,
+        range: {
+            'min': 0,
+            'max': 50
+        },
+        pips: {
+            mode: 'values',
+            values: [0, 50],
+            density: 100
+        }
+        });
+
+        // Update the input formfield values with the slider values
+        slider1.noUiSlider.on('update', function (values, handle) {
+            spend_output1.value = values[handle];
+        });
+
+        slider2.noUiSlider.on('update', function (values, handle) {
+            spend_output2.value = values[handle];
+        });
+
+        slider3.noUiSlider.on('update', function (values, handle) {
+            spend_output3.value = values[handle];
+        });
+
+        /* Show and update the slider value only when the handle is touched */
+        slider1.noUiSlider.on('slide', function () {
+            slider1.noUiSlider.on('update', function (values, handle) {
+            sliderValue1.innerHTML = values[handle];
+            });
+        });
+
+        slider2.noUiSlider.on('slide', function () {
+            slider2.noUiSlider.on('update', function (values, handle) {
+            sliderValue2.innerHTML = values[handle];
+            });
+        });
+
+        slider3.noUiSlider.on('slide', function () {
+            slider3.noUiSlider.on('update', function (values, handle) {
+            sliderValue3.innerHTML = values[handle];
+            });
+        });
+
+        $(document).ready(function () {
+            var handle_style1 = slider1.querySelector('.noUi-handle');
+            slider1.noUiSlider.on('slide', function () {
+                handle_style1.style.display = 'block';
+                handle_style1.style.background = '#007bff';
+            });
+            var handle_style2 = slider2.querySelector('.noUi-handle');
+            slider2.noUiSlider.on('slide', function () {
+                handle_style2.style.display = 'block';
+                handle_style2.style.background = '#007bff';
+            });
+            var handle_style3 = slider3.querySelector('.noUi-handle');
+            slider3.noUiSlider.on('slide', function () {
+                handle_style3.style.display = 'block';
+                handle_style3.style.background = '#007bff';
+            });
+        });
+
+        function myFunction() {
+            if (parseInt(slider1.noUiSlider.get()) === {{ slide_moveto|json }} &&
+                parseInt(slider2.noUiSlider.get()) === {{ slide_moveto|json }} &&
+                parseInt(slider3.noUiSlider.get()) === {{ slide_moveto|json }}) {
+                document.getElementById('check').value = '1';
+            }
+        }
+    </script>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+        /* The value of handle shows only when touching the handle. */
+        .noUi-tooltip {
+            display: none;
+        }
+        .noUi-active .noUi-tooltip {
+            display: block;
+        }
+        .noUi-handle {
+            display: none;
+        }
+        .noUi-pips {
+            top: 7px;
+        }
+        .noUi-pips-values {
+            display: block;
+        }
+        .noUi-value {
+            margin-top: -10px;
+        }
+        .noUi-marker-horizontal.noUi-marker-large {
+            height: 7px;
+        }
+        .noUiSlider {
+            width: 500px;
+        }
+        #div1 {
+            margin-left: 50px;
+        }
+        #div1 {
+            margin-left: 50px;
+        }
+        #div2 {
+            margin-left: 90px;
+        }
+        #div3 {
+            margin-left: 70px;
+        }
+    </style>
+
+{% endblock %}
+
+

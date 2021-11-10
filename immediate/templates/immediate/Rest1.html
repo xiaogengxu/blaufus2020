@@ -1,0 +1,336 @@
+{% extends "immediate/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <h3>
+    <br>
+    life {{ life }}: Period {{ round_num }}/15 (rest phase)
+    </h3>
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <h6 class="alert-heading">{{ form.non_field_errors }}</h6>
+        </div>
+    {% endif %}
+
+    <div id="show_p11">
+    <p>You finished your working phase. Your total Savings and accumulated interest are {{ balance10 }} points.</p>
+
+    <p>On each rest phase period, there will be an automatic <b>Withdrawn</b>, at equal amounts per period.
+        <b>Withdraws</b> are tax-free.</p>
+    </div>
+
+    <p>In this period, {{ rest_reward }} points were withdrawn from your <b>Savings Balance</b>.</p>
+
+    <table id="info_table" style="width: 73%">
+        <colgroup>
+           <col span="1" style="width: 1%;">
+           <col span="1" style="width: 1%;">
+           <col span="1" style="width: 8%;">
+           <col span="1" style="width: 7%;">
+           <col span="1" style="width: 8%;">
+           <col span="1" style="width: 8%;">
+           <col span="1" style="width: 11%;">
+           <col span="1" style="width: 8%;">
+           <col span="1" style="width: 8%;">
+        </colgroup>
+
+    <!-- Put <thead>, <tbody>, and <tr>'s here! -->
+        <tbody>
+            <tr>
+                <th></th>
+                <th>{% blocktrans %}Period{% endblocktrans %}</th>
+                <th>{% blocktrans %}Wage
+                    (gross){% endblocktrans %} <a class="noclick" id="id_tooltip1" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Your wage in points{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans %}Tax{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip2" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}40% wage tax (in points) charged{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans %}Net Wage{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip3" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Wage (gross) minus Tax{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans%}Savings Decision{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip4" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Your savings decision (in points){% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans %}Reward (in points){% endblocktrans %}
+                    <a class="noclick" id="id_tooltip5" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Reward (in points) in the period. It is equal to Net Wage – Savings{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans %}Savings Balance{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip6" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Points you own at the end of the period in your Savings account. This balance earns 5% interest at the end of each period (credited automatically).{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans %}Withdraw{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip7" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Points withdrawn from your Savings account during the rest phase.{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                <td><span id="arrow1"></span></td>
+                <td>1</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving1"></span></td>
+                <td><span id="reward1"></span></td>
+                <td><span id="balance1"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow2"></span></td>
+                <td>2</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving2"></span></td>
+                <td><span id="reward2"></span></td>
+                <td><span id="balance2"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow3"></span></td>
+                <td>3</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving3"></span></td>
+                <td><span id="reward3"></span></td>
+                <td><span id="balance3"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow4"></span></td>
+                <td>4</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving4"></span></td>
+                <td><span id="reward4"></span></td>
+                <td><span id="balance4"></span></td>
+                <td></td>            
+            </tr>
+            <tr>
+                <td><span id="arrow5"></span></td>
+                <td>5</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving5"></span></td>
+                <td><span id="reward5"></span></td>
+                <td><span id="balance5"></span></td>
+                <td></td>            
+            </tr>
+            <tr>
+                <td><span id="arrow6"></span></td>
+                <td>6</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving6"></span></td>
+                <td><span id="reward6"></span></td>
+                <td><span id="balance6"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow7"></span></td>
+                <td>7</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving7"></span></td>
+                <td><span id="reward7"></span></td>
+                <td><span id="balance7"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow8"></span></td>
+                <td>8</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving8"></span></td>
+                <td><span id="reward8"></span></td>
+                <td><span id="balance8"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow9"></span></td>
+                <td>9</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving9"></span></td>
+                <td><span id="reward9"></span></td>
+                <td><span id="balance9"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow10"></span></td>
+                <td>10</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving10"></span></td>
+                <td><span id="reward10"></span></td>
+                <td><span id="balance10"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow11"></span></td>
+                <td>11</td><td>480</td><td>192</td><td>288</td>
+                <td></td>
+                <td><span id="reward11"></span></td>
+                <td><span id="balance11"></span></td>
+                <td><span id="withdraw11"></span></td>
+            </tr>
+            <tr>
+                <td><span id="arrow12"></span></td>
+                <td>12</td><td>480</td><td>192</td><td>288</td>
+                <td></td>
+                <td><span id="reward12"></span></td>
+                <td><span id="balance12"></span></td>
+                <td><span id="withdraw12"></span></td>
+            </tr>
+            <tr>
+                <td><span id="arrow13"></span></td>
+                <td>13</td><td>480</td><td>192</td><td>288</td>
+                <td></td>
+                <td><span id="reward13"></span></td>
+                <td><span id="balance13"></span></td>
+                <td><span id="withdraw13"></span></td>
+            </tr>
+            <tr>
+                <td><span id="arrow14"></span></td>
+                <td>14</td><td>480</td><td>192</td><td>288</td>
+                <td></td>
+                <td><span id="reward14"></span></td>
+                <td><span id="balance14"></span></td>
+                <td><span id="withdraw14"></span></td>
+            </tr>
+            <tr>
+                <td><span id="arrow15"></span></td>
+                <td>15</td><td>480</td><td>192</td><td>288</td>
+                <td></td>
+                <td><span id="reward15"></span></td>
+                <td><span id="balance15"></span></td>
+                <td><span id="withdraw15"></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    {% next_button %}
+
+    {% include 'immediate/includes/tabs.html' %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{ round_num_bar }}%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <script>
+        // Show the forward information only for period 11.
+        period = {{ round_num|json }};
+        if (period > 11) {
+            document.getElementById('show_p11').style.display = 'none';
+        }
+        // Show arrow for the current period
+        document.getElementById('arrow{{ round_num|json }}').innerHTML = '&#10146;';
+
+        $(document).ready(function () {
+            /* Show the previous saving, reward, balance */
+            for (let k = 1; k < 11; k++) {
+                document.getElementById('saving'+k).innerHTML = {{ saving_list|safe }}[k-1];
+            }
+            for (let j = 1; j < {{ round_num|json }}+1; j++) {
+                document.getElementById('reward'+j).innerHTML = {{ reward_list|safe }}[j-1];
+                document.getElementById('balance'+j).innerHTML = {{ balance_list|safe }}[j-1];
+            }
+            for (let l = 11; l < {{ round_num|json }}+1; l++) {
+                document.getElementById('withdraw'+l).innerHTML = {{ withdraw_list|safe }}[l-1];
+            }
+        });
+    </script>
+
+    <style>
+        .otree-title{
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+
+        #info_table {
+          border-collapse: collapse;
+        }
+
+        #info_table th{
+            border: 1px solid #ddd;
+            border-left: none;
+            border-right: none;
+            padding: 6px;
+            text-align: center;
+        }
+
+        #info_table td{
+            border: 1px solid #ddd;
+            border-left: none;
+            border-right: none;
+            {#padding: 8px;#}
+            text-align: center;
+            height: 14px;
+        }
+
+        #info_table tr:nth-child(even){background-color: #f2f2f2;}
+
+        #info_table tr:hover {background-color: #ddd;}
+
+        #id_tooltip1, #id_tooltip2, #id_tooltip3, #id_tooltip4, #id_tooltip5, #id_tooltip6, #id_tooltip7 {
+            border-style: solid;
+            border-color: black;
+            border-radius: 2px;
+            padding: 1px;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+
+{% endblock %}

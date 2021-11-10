@@ -1,0 +1,40 @@
+{% extends "instructions/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <h3>
+    <br>
+    Ineligible to participate
+    </h3>
+
+    <p>You advanced through the Instruction screens faster than a skilled reader would take to read them carefully.
+        Participants must pay attention and understand the Instructions in order to participate.</p>
+
+    <p>Therefore, we regret to inform that you are unable to continue.</p>
+
+    <button class="otree-btn-next btn btn-primary" id="btn1">Finish</button>
+    <br></br>
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="100"
+            aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            <span class="sr-only">100% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+    </style>
+
+{% endblock %}
+
+

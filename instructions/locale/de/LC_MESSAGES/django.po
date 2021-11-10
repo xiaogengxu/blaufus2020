@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-10 21:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\instructions\pages.py:28
+msgid "Please answer the question."
+msgstr ""
+
+#: .\instructions\pages.py:63
+msgid "In each period while you work, you will decide how much of your "
+msgstr ""
+
+#: .\instructions\pages.py:65
+msgid ""
+"Following the work task, at each working period, you will decide how much of "
+"your "
+msgstr ""
+
+#: .\instructions\pages.py:113
+msgid ", plus the tax refund"
+msgstr ""
+
+#: .\instructions\templates\instructions\Intro.html:19
+msgid "Welcome!"
+msgstr ""
+
+#: .\instructions\templates\instructions\Intro.html:21
+msgid ""
+"In this survey,\n"
+"        you will participate in a <b>simulation</b> where you will be asked "
+"to make <b>financial decisions</b>."
+msgstr ""
+
+#: .\instructions\templates\instructions\Intro.html:24
+msgid ""
+"Depending on your financial decisions,\n"
+"        you can earn an <b>additional compensation</b> that ranges between "
+"EUR 5 and EUR 15 on average.\n"
+"        Higher or lower amounts are also possible."
+msgstr ""
+
+#: .\instructions\templates\instructions\Intro.html:28
+msgid ""
+"To maximize your compensation, we first ask you to read the <b>instructions</"
+"b> carefully.\n"
+"        Then, you will participate in a <b>trial</b> round.\n"
+"        Then, before starting with the real simulation,\n"
+"        you will be asked to correctly answer a <b>quiz</b> on the "
+"simulation's rules."
+msgstr ""
+
+#: .\instructions\templates\instructions\Intro.html:33
+msgid ""
+"Only participants <b>correctly</b> answering the quiz questions will be\n"
+"        admitted to the real simulation and earn compensation."
+msgstr ""
+
+#: .\instructions\templates\instructions\Intro.html:36
+msgid ""
+"The simulation must be completed <b>without long interruptions</b>.\n"
+"        Please, only start the simulation if you have enough time."
+msgstr ""
+
+#: .\instructions\templates\instructions\Intro.html:39
+msgid "Do you want to start the simulation?"
+msgstr ""
+
+#: .\instructions\templates\instructions\Intro.html:41
+msgid "Yes"
+msgstr ""
+
+#: .\instructions\templates\instructions\Intro.html:43
+msgid "No"
+msgstr ""
+
+#: .\instructions\templates\instructions\Intro.html:46
+msgid "Next"
+msgstr ""

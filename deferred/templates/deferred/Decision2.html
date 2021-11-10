@@ -1,0 +1,445 @@
+{% extends "deferred/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <head>
+        <link href="{% static 'nouislider.min.css' %}" rel="stylesheet">
+        <script src="{% static 'wNumb.min.js' %}"></script>
+        <script src="{% static 'nouislider.min.js' %}"></script>
+    </head>
+
+    <h3>
+    <br>
+    life {{ life }}: Period {{ round_num_title }}/15 (working phase)
+    </h3>
+
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            <h6 class="alert-heading">{{ form.non_field_errors }}</h6>
+        </div>
+    {% endif %}
+
+    <p>You completed your work task and earned a Wage of 480 points.</p>
+
+    <div id="show_p2">
+    <p>From Periods 1 to {{ round_num_show }}, you have saved on average {{ avg_list }} points per period.</p>
+
+    <p>If in the next working periods you maintain this level of savings,
+        your after-tax Payoff during the rest phase will be {{ rest_points }} points per period.</p>
+    </div>
+
+    <p>Please tap and move on the slider below to indicate how much you would like to save in current Period.</p>
+
+    <input type="hidden" name="saving_def2" value="" id="myRange"/>
+    <input type="hidden" name="check_def2" value="" id="id_check"/>
+    <input type="hidden" name="reward_def2" value="" id="reward"/>
+    <div type="range" class="noUiSlider" id="slider"></div>
+
+    <br><br>
+    <table id="info_table" style="width: 85%">
+        <colgroup>
+           <col span="1" style="width: 1%;">
+           <col span="1" style="width: 1%;">
+           <col span="1" style="width: 10%;">
+           <col span="1" style="width: 7%;">
+           <col span="1" style="width: 9%;">
+           <col span="1" style="width: 11%;">
+           <col span="1" style="width: 10%;">
+           <col span="1" style="width: 11%;">
+           <col span="1" style="width: 10%;">
+           <col span="1" style="width: 12%;">
+        </colgroup>
+
+    <!-- Put <thead>, <tbody>, and <tr>'s here! -->
+        <tbody>
+            <tr>
+                <th></th>
+                <th>{% blocktrans %}Period{% endblocktrans %}</th>
+                <th>{% blocktrans %}Wage
+                    (gross){% endblocktrans %} <a class="noclick" id="id_tooltip1" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Your wage in points{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans %}Tax{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip2" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}40% wage tax (in points) charged{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans %}Net Wage{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip3" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Wage (gross) minus Tax{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans%}Savings Decision{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip4" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Your savings decision (in points){% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans%}Tax refund{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip5" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}refund (in points) given back to you (40% of your Savings){% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans %}Payoff{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip6" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Reward (in points) in the period. It is equal to Net Wage – Savings{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans %}Savings Balance{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip7" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Points you own at the end of the period in your Savings account. This balance earns 5% interest at the end of each period (credited automatically).{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+                <th>{% blocktrans %}Withdraw{% endblocktrans %}
+                    <a class="noclick" id="id_tooltip8" href="#" data-toggle="tooltip" data-placement="right"
+                            title="
+                            {% blocktrans %}Points withdrawn from your Savings account during the rest phase.{% endblocktrans %}">
+                        ?
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                <td><span id="arrow16"></span></td>
+                <td>1</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving16"></span></td>
+                <td><span id="refund16"></span></td>
+                <td><span id="reward16"></span></td>
+                <td><span id="balance16"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow17"></span></td>
+                <td>2</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving17"></span></td>
+                <td><span id="refund17"></span></td>
+                <td><span id="reward17"></span></td>
+                <td><span id="balance17"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow18"></span></td>
+                <td>3</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving18"></span></td>
+                <td><span id="refund18"></span></td>
+                <td><span id="reward18"></span></td>
+                <td><span id="balance18"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow19"></span></td>
+                <td>4</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving19"></span></td>
+                <td><span id="refund19"></span></td>
+                <td><span id="reward19"></span></td>
+                <td><span id="balance19"></span></td>
+                <td></td>            
+            </tr>
+            <tr>
+                <td><span id="arrow20"></span></td>
+                <td>5</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving20"></span></td>
+                <td><span id="refund20"></span></td>
+                <td><span id="reward20"></span></td>
+                <td><span id="balance20"></span></td>
+                <td></td>            
+            </tr>
+            <tr>
+                <td><span id="arrow21"></span></td>
+                <td>6</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving21"></span></td>
+                <td><span id="refund21"></span></td>
+                <td><span id="reward21"></span></td>
+                <td><span id="balance21"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow22"></span></td>
+                <td>7</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving22"></span></td>
+                <td><span id="refund22"></span></td>
+                <td><span id="reward22"></span></td>
+                <td><span id="balance22"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow23"></span></td>
+                <td>8</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving23"></span></td>
+                <td><span id="refund23"></span></td>
+                <td><span id="reward23"></span></td>
+                <td><span id="balance23"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow24"></span></td>
+                <td>9</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving24"></span></td>
+                <td><span id="refund24"></span></td>
+                <td><span id="reward24"></span></td>
+                <td><span id="balance24"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow25"></span></td>
+                <td>10</td><td>480</td><td>192</td><td>288</td>
+                <td><span id="saving25"></span></td>
+                <td><span id="refund25"></span></td>
+                <td><span id="reward25"></span></td>
+                <td><span id="balance25"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow26"></span></td>
+                <td>11</td><td>480</td><td>192</td><td>288</td>
+                <td></td>
+                <td></td>
+                <td><span id="reward26"></span></td>
+                <td><span id="balance26"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow27"></span></td>
+                <td>12</td><td>480</td><td>192</td><td>288</td>
+                <td></td>
+                <td></td>
+                <td><span id="reward27"></span></td>
+                <td><span id="balance27"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow28"></span></td>
+                <td>13</td><td>480</td><td>192</td><td>288</td>
+                <td></td>
+                <td></td>
+                <td><span id="reward28"></span></td>
+                <td><span id="balance28"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow29"></span></td>
+                <td>14</td><td>480</td><td>192</td><td>288</td>
+                <td></td>
+                <td></td>
+                <td><span id="reward29"></span></td>
+                <td><span id="balance29"></span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span id="arrow30"></span></td>
+                <td>15</td><td>480</td><td>192</td><td>288</td>
+                <td></td>
+                <td></td>
+                <td><span id="reward30"></span></td>
+                <td><span id="balance30"></span></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    {% next_button %}
+
+    {% include 'deferred/includes/tabs.html' %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{ round_num_bar }}%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <script>
+        // Show the forward information only for period 2-9.
+        period = {{ round_num|json }};
+        if (period === 16 || period === 25) {
+            document.getElementById('show_p2').style.display = 'none';
+        }
+        // Show arrow for the current period
+        document.getElementById('arrow{{ round_num|json }}').innerHTML = '&#10146;';
+
+        $(document).ready(function () {
+            var slider = document.getElementById('slider');
+            var save_output = document.getElementById('myRange');
+            var check = document.getElementById('id_check');
+            var reward = document.getElementById('reward');
+
+            // Initializing the sliders
+            noUiSlider.create(slider, {
+            start: 0,
+            step: 1,
+            tooltips: wNumb({decimals: 0}),
+            format: wNumb({decimals: 0}),
+            // Disable animation on value-setting,
+            // so the sliders respond immediately.
+            animate: false,
+            range: {
+                'min': 0,
+                'max': 288
+            },
+            pips: {
+                mode: 'values',
+                values: [0, 288],
+                density: 288
+            }
+            });
+
+            // Update the input formfield values with the slider values
+            slider.noUiSlider.on('update', function (values, handle) {
+                save_output.value = values[handle];
+                reward.value = Math.round(288 - 0.6*values[handle]);
+            });
+
+            var handle_style = document.getElementById("slider").querySelector('.noUi-handle');
+            slider.noUiSlider.on('slide', function () {
+                handle_style.style.display = 'block';
+                handle_style.style.background = '#007bff';
+                check.value = 1;
+            });
+
+            /* Show and update the slider value only when the handle is touched */
+            slider.noUiSlider.on('slide', function () {
+                slider.noUiSlider.on('update', function (values, handle) {
+                    document.getElementById('saving{{ round_num|json }}').innerHTML = values[handle];
+                    document.getElementById('refund{{ round_num|json }}').innerHTML = Math.round(0.4*values[handle]);
+                    document.getElementById('reward{{ round_num|json }}').innerHTML = Math.round(288 - 0.6*values[handle]);
+                    r = {{ round_num|json }};
+                    if (r === 16) {
+                        document.getElementById('balance{{ round_num|json }}').innerHTML = values[handle];
+                    }
+                    else {
+                        document.getElementById('balance{{ round_num|json }}').innerHTML =
+                            Math.round({{ balance_list|safe }}[{{ round_num|json }}-17] * 1.05) + Math.round(values[handle]);
+                    }
+                });
+            });
+
+            /* Show the previous saving, reward, balance */
+            for (let k = 16; k < {{ round_num|json }}; k++) {
+                document.getElementById('saving'+k).innerHTML = {{ saving_list|safe }}[k-16];
+                document.getElementById('refund'+k).innerHTML = {{ refund_list|safe }}[k-16];
+                document.getElementById('reward'+k).innerHTML = {{ reward_list|safe }}[k-16];
+                document.getElementById('balance'+k).innerHTML = {{ balance_list|safe }}[k-16];
+            }
+        });
+    </script>
+
+    <style>
+        .otree-title{
+            display: none;
+        }
+        .otree-form-errors {
+            visibility: hidden;
+            display: none;
+        }
+        /* The value of handle shows only when touching the handle. */
+        .noUi-tooltip {
+            display: none;
+        }
+        .noUi-active .noUi-tooltip {
+            display: block;
+        }
+        .noUi-handle {
+            display: none;
+        }
+        .noUi-pips {
+            top: 7px;
+        }
+        .noUi-pips-values {
+            display: block;
+        }
+        .noUi-value {
+            margin-top: -10px;
+        }
+        .noUi-marker-horizontal.noUi-marker-large {
+            height: 7px;
+        }
+        #info_table {
+          border-collapse: collapse;
+        }
+
+        #info_table th{
+            border: 1px solid #ddd;
+            border-left: none;
+            border-right: none;
+            padding: 6px;
+            text-align: center;
+        }
+
+        #info_table td{
+            border: 1px solid #ddd;
+            border-left: none;
+            border-right: none;
+            {#padding: 8px;#}
+            text-align: center;
+            height: 14px;
+        }
+
+        #info_table tr:nth-child(even){background-color: #f2f2f2;}
+
+        #info_table tr:hover {background-color: #ddd;}
+
+        #id_tooltip1, #id_tooltip2, #id_tooltip3, #id_tooltip4, #id_tooltip5, #id_tooltip6, #id_tooltip7, #id_tooltip8 {
+            border-style: solid;
+            border-color: black;
+            border-radius: 2px;
+            padding: 1px;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+
+{% endblock %}

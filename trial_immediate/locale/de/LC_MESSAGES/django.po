@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-10 21:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\trial_immediate\pages.py:30
+msgid "Your sliders are not all set to target number "
+msgstr ""
+
+#: .\trial_immediate\pages.py:31
+msgid ". Please, try again."
+msgstr ""
+
+#: .\trial_immediate\pages.py:55
+msgid "Please decide how much you would like to save."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:59
+#: .\trial_immediate\templates\trial_immediate\Rest.html:45
+msgid "Period"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:60
+#: .\trial_immediate\templates\trial_immediate\Rest.html:46
+msgid ""
+"Wage\n"
+"                    (gross)"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:63
+#: .\trial_immediate\templates\trial_immediate\Rest.html:49
+msgid "Your wage in points"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:67
+#: .\trial_immediate\templates\trial_immediate\Rest.html:53
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:9
+msgid "Tax"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:70
+#: .\trial_immediate\templates\trial_immediate\Rest.html:56
+#, python-format
+msgid "40%% wage tax (in points) charged"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:74
+#: .\trial_immediate\templates\trial_immediate\Rest.html:60
+msgid "Net Wage"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:77
+#: .\trial_immediate\templates\trial_immediate\Rest.html:63
+msgid "Wage (gross) minus Tax"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:81
+#: .\trial_immediate\templates\trial_immediate\Rest.html:67
+msgid "Savings Decision"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:84
+#: .\trial_immediate\templates\trial_immediate\Rest.html:70
+msgid "Your savings decision (in points)"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:88
+#: .\trial_immediate\templates\trial_immediate\Rest.html:74
+msgid "Reward (in points)"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:91
+#: .\trial_immediate\templates\trial_immediate\Rest.html:77
+msgid "Reward (in points) in the period. It is equal to Net Wage – Savings"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:95
+#: .\trial_immediate\templates\trial_immediate\Rest.html:81
+msgid "Savings Balance"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:98
+#: .\trial_immediate\templates\trial_immediate\Rest.html:84
+#, python-format
+msgid ""
+"Points you own at the end of the period in your Savings account. This "
+"balance earns 5%% interest at the end of each period (credited "
+"automatically)."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:102
+#: .\trial_immediate\templates\trial_immediate\Rest.html:88
+msgid "Withdraw"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:105
+#: .\trial_immediate\templates\trial_immediate\Rest.html:91
+msgid "Points withdrawn from your Savings account during the rest phase."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\End.html:11
+msgid "Before you advance to the live round, you need to complete a quiz."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\End.html:15
+msgid ""
+"You will be removed from the game, and earn no compensation,\n"
+"            if you give two or more wrong answers."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\End.html:19
+msgid ""
+"If you need to read the instructions again,\n"
+"        you will find them at the bottom of the page with the test questions."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:6
+msgid "Instruction"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:7
+msgid "Experiment"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:8
+msgid "Working phase"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:10
+msgid "Savings"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:11
+msgid "Your reward"
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:15
+msgid "Please click the other tabs to check the instruction if you want."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:19
+msgid ""
+"In this experiment, you will decide how much to save during a simulated life."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:21
+msgid ""
+"Your life will have two phases: a working phase (10 periods) and a rest "
+"phase (5 periods).\n"
+"        In the working phase, you will work, earn income, and decide how "
+"much to save. In the rest phase, you will not earn any income."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:24
+msgid "You will have two lives."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:28
+msgid ""
+"At the beginning of each period of the <b>working phase</b>, you will work "
+"on a simple task."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:30
+msgid ""
+"For each submitted task you will receive a fixed <b>Wage</b> of 480 points."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:34
+#, python-format
+msgid ""
+"Your <b>Wage</b> will be subject to a Tax of 40%%. The Tax will be deducted "
+"from your Wage."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:36
+msgid "Your <b>Net Wage</b> will be your Wage minus <b>Tax</b>."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:40
+msgid ""
+"In each period while you work,\n"
+"        you will decide how much of your <b>Net Wage</b> to put on "
+"<b>Savings</b> for the rest phase."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:43
+#, python-format
+msgid "Your <b>Savings</b> will earn 5%% interest per period."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:45
+msgid ""
+"You will receive your <b>Savings</b> including accumulated interest back "
+"during the <b>rest phase</b>.\n"
+"        The computer will automatically calculate equal <b>Withdraw</b> per "
+"each period of the rest phase."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:48
+msgid "Savings <b>Withdraws</b> in the <b>rest phase</b> are tax-free."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:52
+msgid ""
+"In <b>working periods</b>,\n"
+"        your <b>Reward</b> will be the difference between your <b>Net Wage</"
+"b> and your <b>Savings</b>."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:55
+msgid ""
+"In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b>."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:57
+msgid "In each period, your <b>Reward</b> will be automatically calculated."
+msgstr ""
+
+#: .\trial_immediate\templates\trial_immediate\includes\tabs.html:59
+msgid ""
+"For your final Reward, the computer will randomly select one period of one "
+"of your two lives.\n"
+"        The <b>Reward</b> (in points) in that period will be exchanged for "
+"Euros at a rate of <b>&euro; 1.00 = 25 points</b>."
+msgstr ""

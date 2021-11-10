@@ -1,0 +1,31 @@
+{% extends "trial_deferred/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <h3>
+    <br>
+    Summary
+    </h3>
+
+    <p>This is the end of the trial life. A reward from the trial round will not be paid to you, as this is just a test.</p>
+
+    {% next_button %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:38%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title{
+            display: none;
+        }
+    </style>
+
+{% endblock %}

@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-10 21:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\immediate\templates\immediate\Decision1.html:59
+#: .\immediate\templates\immediate\Decision2.html:59
+#: .\immediate\templates\immediate\Rest1.html:45
+#: .\immediate\templates\immediate\Rest2.html:45
+msgid "Period"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:60
+#: .\immediate\templates\immediate\Decision2.html:60
+#: .\immediate\templates\immediate\Rest1.html:46
+#: .\immediate\templates\immediate\Rest2.html:46
+msgid ""
+"Wage\n"
+"                    (gross)"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:63
+#: .\immediate\templates\immediate\Decision2.html:63
+#: .\immediate\templates\immediate\Rest1.html:49
+#: .\immediate\templates\immediate\Rest2.html:49
+msgid "Your wage in points"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:67
+#: .\immediate\templates\immediate\Decision2.html:67
+#: .\immediate\templates\immediate\Rest1.html:53
+#: .\immediate\templates\immediate\Rest2.html:53
+#: .\immediate\templates\immediate\includes\tabs.html:9
+msgid "Tax"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:70
+#: .\immediate\templates\immediate\Decision2.html:70
+#: .\immediate\templates\immediate\Rest1.html:56
+#: .\immediate\templates\immediate\Rest2.html:56
+#, python-format
+msgid "40%% wage tax (in points) charged"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:74
+#: .\immediate\templates\immediate\Decision2.html:74
+#: .\immediate\templates\immediate\Rest1.html:60
+#: .\immediate\templates\immediate\Rest2.html:60
+msgid "Net Wage"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:77
+#: .\immediate\templates\immediate\Decision2.html:77
+#: .\immediate\templates\immediate\Rest1.html:63
+#: .\immediate\templates\immediate\Rest2.html:63
+msgid "Wage (gross) minus Tax"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:81
+#: .\immediate\templates\immediate\Decision2.html:81
+#: .\immediate\templates\immediate\Rest1.html:67
+#: .\immediate\templates\immediate\Rest2.html:67
+msgid "Savings Decision"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:84
+#: .\immediate\templates\immediate\Decision2.html:84
+#: .\immediate\templates\immediate\Rest1.html:70
+#: .\immediate\templates\immediate\Rest2.html:70
+msgid "Your savings decision (in points)"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:88
+#: .\immediate\templates\immediate\Decision2.html:88
+#: .\immediate\templates\immediate\Rest1.html:74
+#: .\immediate\templates\immediate\Rest2.html:74
+msgid "Reward (in points)"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:91
+#: .\immediate\templates\immediate\Decision2.html:91
+#: .\immediate\templates\immediate\Rest1.html:77
+#: .\immediate\templates\immediate\Rest2.html:77
+msgid "Reward (in points) in the period. It is equal to Net Wage – Savings"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:95
+#: .\immediate\templates\immediate\Decision2.html:95
+#: .\immediate\templates\immediate\Rest1.html:81
+#: .\immediate\templates\immediate\Rest2.html:81
+msgid "Savings Balance"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:98
+#: .\immediate\templates\immediate\Decision2.html:98
+#: .\immediate\templates\immediate\Rest1.html:84
+#: .\immediate\templates\immediate\Rest2.html:84
+#, python-format
+msgid ""
+"Points you own at the end of the period in your Savings account. This "
+"balance earns 5%% interest at the end of each period (credited "
+"automatically)."
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:102
+#: .\immediate\templates\immediate\Decision2.html:102
+#: .\immediate\templates\immediate\Rest1.html:88
+#: .\immediate\templates\immediate\Rest2.html:88
+msgid "Withdraw"
+msgstr ""
+
+#: .\immediate\templates\immediate\Decision1.html:105
+#: .\immediate\templates\immediate\Decision2.html:105
+#: .\immediate\templates\immediate\Rest1.html:91
+#: .\immediate\templates\immediate\Rest2.html:91
+msgid "Points withdrawn from your Savings account during the rest phase."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:6
+msgid "Instruction"
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:7
+msgid "Experiment"
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:8
+msgid "Working phase"
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:10
+msgid "Savings"
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:11
+msgid "Your reward"
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:15
+msgid "Please click the other tabs to check the instruction if you want."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:19
+msgid ""
+"In this experiment, you will decide how much to save during a simulated life."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:21
+msgid ""
+"Your life will have two phases: a working phase (10 periods) and a rest "
+"phase (5 periods).\n"
+"        In the working phase, you will work, earn income, and decide how "
+"much to save. In the rest phase, you will not earn any income."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:24
+msgid "You will have two lives."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:28
+msgid ""
+"At the beginning of each period of the <b>working phase</b>, you will work "
+"on a simple task."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:30
+msgid ""
+"For each submitted task you will receive a fixed <b>Wage</b> of 480 points."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:34
+#, python-format
+msgid ""
+"Your <b>Wage</b> will be subject to a Tax of 40%%. The Tax will be deducted "
+"from your Wage."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:36
+msgid "Your <b>Net Wage</b> will be your Wage minus <b>Tax</b>."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:40
+msgid ""
+"In each period while you work,\n"
+"        you will decide how much of your <b>Net Wage</b> to put on "
+"<b>Savings</b> for the rest phase."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:43
+#, python-format
+msgid "Your <b>Savings</b> will earn 5%% interest per period."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:45
+msgid ""
+"You will receive your <b>Savings</b> including accumulated interest back "
+"during the <b>rest phase</b>.\n"
+"        The computer will automatically calculate equal <b>Withdraw</b> per "
+"each period of the rest phase."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:48
+msgid "Savings <b>Withdraws</b> in the <b>rest phase</b> are tax-free."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:52
+msgid ""
+"In <b>working periods</b>,\n"
+"        your <b>Reward</b> will be the difference between your <b>Net Wage</"
+"b> and your <b>Savings</b>."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:55
+msgid ""
+"In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b>."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:57
+msgid "In each period, your <b>Reward</b> will be automatically calculated."
+msgstr ""
+
+#: .\immediate\templates\immediate\includes\tabs.html:59
+msgid ""
+"For your final Reward, the computer will randomly select one period of one "
+"of your two lives.\n"
+"        The <b>Reward</b> (in points) in that period will be exchanged for "
+"Euros at a rate of <b>&euro; 1.00 = 25 points</b>."
+msgstr ""
