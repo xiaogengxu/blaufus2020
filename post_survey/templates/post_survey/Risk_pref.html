@@ -17,12 +17,12 @@
         </div>
     {% endif %}
 
-    <h3><br>Task 1/2</h3>
+    <h3><br>{% blocktrans %}Task{% endblocktrans %} 1/2</h3>
 
-    <p>Now, you can invest part of (or all) your rewards in a risky investment.
+    <p>{% blocktrans %}Now, you can invest part of (or all) your rewards in a risky asset.
         <br>
-        With the risky investment, in 1/3 of the cases you will gain 2.5 times the amount you invest,
-        in 2/3 of the cases you will lose the amount you invest.</p>
+        With the risky asset, in 1/3 of the cases you will gain 2.5 times the amount you invest,
+        in 2/3 of the cases you will lose the amount you invest.{% endblocktrans %}</p>
 
     <script src="{% static 'TweenMax.min.js' %}"></script>
     <script src="{% static 'Winwheel.min.js' %}"></script>
@@ -84,23 +84,22 @@
         }
     </script>
 
-    <p>The amount you do not invest is not affected by the outcome of the risky asset.
+    <p>{% blocktrans %}The amount you do not invest is not affected by the outcome of the risky asset.
         <br>
         Use the slider to see your potential gain and loss with the risky asset
-        and decide what percentage of your rewards to invest in it.</p>
+        and decide what percentage of your rewards to invest in it.{% endblocktrans %}</p>
 
     <input type="hidden" name="risk_choice" value="" id="myRange"/>
     <input type="hidden" name="check_risk_choice" value="" id="id_check_risk_choice"/>
     <div type="range" class="noUiSlider" id="slider_risk_choice"></div>
     <hr style="height:8px; visibility:hidden" />
 
-    <p>You invest <span id="demo_risky"></span>% of your reward in the risky investment.
+    <p>{% blocktrans %}You invest <span id="demo_risky"></span>% of your reward in the risky investment.
         <br>
         <b>In 1/3 of the cases, you will gain <span id="demo_win"></span>% over your original reward.
             <br>
             In 2/3 of the cases, you will lose <span id="demo_lose"></span>% of your original reward.
-        </b>
-        
+        </b>{% endblocktrans %}
     </p>
 
     <br>

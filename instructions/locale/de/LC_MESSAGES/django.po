@@ -3,41 +3,288 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 21:05+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2021-11-11 22:09+0200\n"
+"PO-Revision-Date: 2021-11-11 21:01+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+"X-Generator: Poedit 2.4.2\n"
 
-#: .\instructions\pages.py:28
+#: .\instructions\pages.py:27
 msgid "Please answer the question."
-msgstr ""
+msgstr "Bitte beantworten Sie die Frage."
 
-#: .\instructions\pages.py:63
-msgid "In each period while you work, you will decide how much of your "
-msgstr ""
+#: .\instructions\templates\instructions\End_instruct.html:10
+msgid "Ineligible to participate"
+msgstr "Teilnahmeausschluss"
 
-#: .\instructions\pages.py:65
+#: .\instructions\templates\instructions\End_instruct.html:13
 msgid ""
-"Following the work task, at each working period, you will decide how much of "
-"your "
+"You advanced through the Instruction screens faster than a skilled reader "
+"would take to read them carefully.\n"
+"        Participants must pay attention and understand the Instructions in "
+"order to participate."
 msgstr ""
+"Wir danken Ihnen für Ihre Teilnahme. Leider brauchten Sie für die Aufgaben "
+"weniger Zeit als ein geübter Leser brauchen würde, um die Aufgaben "
+"sorgfältig zu lesen."
 
-#: .\instructions\pages.py:113
-msgid ", plus the tax refund"
+#: .\instructions\templates\instructions\End_instruct.html:16
+msgid "Therefore, we regret to inform that you are unable to continue."
 msgstr ""
+"Wir bedauern, dass wir Sie deshalb leider ausschließen müssen und Sie nicht "
+"weiterspielen können."
+
+#: .\instructions\templates\instructions\End_instruct.html:18
+msgid "Finish"
+msgstr "Fertig"
+
+#: .\instructions\templates\instructions\Instruct0.html:10
+msgid "The Financial Decision-Making Experiment"
+msgstr "Das Experiment"
+
+#: .\instructions\templates\instructions\Instruct0.html:13
+msgid ""
+"In this experiment, you will decide how much to save during a simulated life."
+msgstr ""
+"In diesem Experiment werden Sie im Rahmen eines simulierten Lebens "
+"<b>Sparentscheidungen</b> treffen."
+
+#: .\instructions\templates\instructions\Instruct0.html:15
+msgid ""
+"Your life will have two phases: a working phase (10 periods) and a rest "
+"phase (5 periods).\n"
+"        In the working phase, you will work, earn income, and decide how "
+"much to save.\n"
+"        In the rest phase, you will not earn any income."
+msgstr ""
+"Ihr simuliertes Leben wird zwei Phasen haben: eine <b>Arbeitsphase</b> von "
+"10 Perioden und eine <b>Ruhestandsphase</b> von 5 Perioden. In der "
+"Arbeitsphase werden Sie arbeiten und einen Lohn verdienen. In dieser Phase "
+"werden Sie auch entscheiden, wie viel Sie für die Ruhestandsphase sparen "
+"wollen. In der Ruhestandsphase werden Sie nicht arbeiten und deswegen keinen "
+"Lohn bekommen."
+
+#: .\instructions\templates\instructions\Instruct0.html:19
+msgid "You will have two lives."
+msgstr "Sie werden zwei Leben haben."
+
+#: .\instructions\templates\instructions\Instruct1.html:10
+msgid "Working task and wages (working phase)"
+msgstr "Arbeitsaufgabe und Lohn"
+
+#: .\instructions\templates\instructions\Instruct1.html:13
+msgid ""
+"At the beginning of each period of the <b>working phase</b>,\n"
+"        you will work on a simple task."
+msgstr ""
+"In der <b>Arbeitsphase</b> werden Sie zu Beginn jeder Periode eine einfache "
+"Aufgabe bearbeiten."
+
+#: .\instructions\templates\instructions\Instruct1.html:16
+msgid ""
+"For each submitted task you will receive a fixed <b>Wage</b> of 480 points."
+msgstr ""
+"Für jede erfüllte Aufgabe werden Sie einen fixen <b>Lohn</b> von <b>480 "
+"Punkten</b> bekommen."
+
+#: .\instructions\templates\instructions\Instruct2.html:10
+msgid "Wage Tax"
+msgstr "Lohnsteuer"
+
+#: .\instructions\templates\instructions\Instruct2.html:13
+#, python-format
+msgid ""
+"Your <b>Wage</b> will be subject to a <b>Tax</b> of 40%%.\n"
+"        The Tax will be deducted from your Wage."
+msgstr ""
+"Ihr Arbeitslohn unterliegt einer Steuer in Höhe von 40%%, die direkt "
+"einbehalten wird."
+
+#: .\instructions\templates\instructions\Instruct2.html:16
+msgid "Your <b>Net Wage</b> will be your Wage minus <b>Tax</b>."
+msgstr "Ihr Arbeitslohn abzüglich der Steuer ergibt Ihren <b>Nettolohn</b>."
+
+#: .\instructions\templates\instructions\Instruct3_deferred.html:10
+#: .\instructions\templates\instructions\Instruct3_immediate.html:10
+#: .\instructions\templates\instructions\Instruct3_matching.html:10
+msgid "Savings"
+msgstr "Sparentscheidungen"
+
+#: .\instructions\templates\instructions\Instruct3_deferred.html:13
+#: .\instructions\templates\instructions\Instruct3_matching.html:13
+msgid ""
+"Following the work task, at each working period,\n"
+"        you will decide how much of your <b>Net Wage</b> to put on "
+"<b>Savings</b> for the rest phase."
+msgstr ""
+"Solange Sie arbeiten, werden Sie in jeder Periode entscheiden wie viel Sie "
+"von Ihrem Nettolohn für die Ruhestandsphase <b>sparen</b> wollen."
+
+#: .\instructions\templates\instructions\Instruct3_deferred.html:16
+#: .\instructions\templates\instructions\Instruct3_immediate.html:16
+#, python-format
+msgid "Your <b>Savings</b> will earn 5%% interest per period."
+msgstr ""
+"Der Sparbetrag wird bis zur Auszahlung in der Ruhestandsphase mit 5%% pro "
+"Periode verzinst."
+
+#: .\instructions\templates\instructions\Instruct3_deferred.html:18
+#, python-format
+msgid ""
+"Since you do not pay taxes on Savings,\n"
+"        you will receive 40%% of the amount that you decide to save in each "
+"period as a <b>Refund</b>,\n"
+"        which will be added automatically to your <b>Reward</b> in each "
+"period.\n"
+"        For example, if you save 100 points in one period, you will receive "
+"40 points as a <b>Tax Refund</b> in that period."
+msgstr ""
+"Da der Betrag, den Sie sparen von Steuern befreit ist, erhalten Sie in jeder "
+"Periode eine <b>Steuererstattung</b> in Höhe von 40%% des Sparbetrags."
+
+#: .\instructions\templates\instructions\Instruct3_deferred.html:23
+#: .\instructions\templates\instructions\Instruct3_immediate.html:18
+msgid ""
+"You will receive your <b>Savings</b> including accumulated interest back "
+"during the <b>rest phase</b>.\n"
+"        The computer will automatically calculate equal <b>Withdraw</b> per "
+"each period of the rest phase."
+msgstr ""
+"Für jede Periode in der Arbeitsphase wird der Computer automatisch berechnen "
+"wie viele Ersparnisse Sie bereits akkumuliert haben. Der Bezug der "
+"Ersparnisse in der Ruhestandsphase wird auf alle Perioden dieser Phase "
+"gleichmäßig verteilt. In der Ruhestandsphase werden Sie somit keine "
+"Entscheidungen mehr treffen."
+
+#: .\instructions\templates\instructions\Instruct3_deferred.html:26
+#: .\instructions\templates\instructions\Instruct3_matching.html:24
+#, python-format
+msgid ""
+"Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of 40%"
+"%."
+msgstr ""
+"Beim Bezug der Ersparnisse in der Ruhestandsphase werden Sie eine Steuer in "
+"Höhe von 40%% zahlen."
+
+#: .\instructions\templates\instructions\Instruct3_immediate.html:13
+msgid ""
+"In each period while you work,\n"
+"        you will decide how much of your <b>Net Wage</b> to put on "
+"<b>Savings</b> for the rest phase."
+msgstr ""
+"Solange Sie arbeiten, werden Sie in jeder Periode entscheiden wie viel Sie "
+"von Ihrem Nettolohn für die Ruhestandsphase <b>sparen</b> wollen."
+
+#: .\instructions\templates\instructions\Instruct3_immediate.html:21
+msgid "Savings <b>Withdraws</b> in the <b>rest phase</b> are tax-free."
+msgstr ""
+"Der <b>Bezug</b> der Ersparnisse in der Ruhestandsphase ist <b>steuerfrei</"
+"b>."
+
+#: .\instructions\templates\instructions\Instruct3_matching.html:16
+#, python-format
+msgid ""
+"You will receive a <b>bonus</b> of 66.67%% over the amount saved.\n"
+"        For example, if you save 100 points, your bonus will be 67 points."
+msgstr ""
+"Auf den Betrag, den Sie in jeder Periode sparen, erhalten Sie ein Bonus von "
+"66.67%%."
+
+#: .\instructions\templates\instructions\Instruct3_matching.html:19
+#, python-format
+msgid "All your <b>Savings</b> earn 5%% interest per period."
+msgstr ""
+"Ihre Ersparnisse werden bis zum Beginn der Ruhestandsphase mit 5%% pro "
+"Periode verzinst."
+
+#: .\instructions\templates\instructions\Instruct3_matching.html:21
+msgid ""
+"You will receive your <b>Savings</b> back during the <b>rest phase</b>.\n"
+"        The computer will automatically calculate equal <b>Withdraw</b> per "
+"each period of the rest phase."
+msgstr ""
+"Für jede Periode in der Arbeitsphase wird der Computer automatisch berechnen "
+"wie viele Ersparnisse Sie bereits akkumuliert haben. Der Bezug der "
+"Ersparnisse in der Ruhestandsphase wird auf alle Perioden dieser Phase "
+"gleichmäßig verteilt. In der Ruhestandsphase werden Sie somit keine "
+"Entscheidungen treffen."
+
+#: .\instructions\templates\instructions\Instruct4_deferred.html:10
+#: .\instructions\templates\instructions\Instruct4_immediate.html:10
+#: .\instructions\templates\instructions\Instruct4_matching.html:10
+msgid "Your Reward"
+msgstr "Ihre Belohnung"
+
+#: .\instructions\templates\instructions\Instruct4_deferred.html:13
+msgid ""
+"In <b>working periods</b>,\n"
+"        your <b>Reward</b> will be the difference between your <b>Net Wage</"
+"b> and your <b>Savings, plus the tax refund</b>."
+msgstr ""
+"In jeder Periode während der Arbeitsphase entspricht Ihre Belohnung (in "
+"Punkten) Ihrem Nettolohn abzüglich des Betrags, den Sie sparen zuzüglich der "
+"Steuerrückerstattung."
+
+#: .\instructions\templates\instructions\Instruct4_deferred.html:16
+#: .\instructions\templates\instructions\Instruct4_matching.html:16
+#, python-format
+msgid ""
+"In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b> "
+"minus its <b>Tax</b> of 40%%."
+msgstr ""
+"In der Ruhestandsphase entspricht Ihre Belohnung (in Punkten) dem bezogenen "
+"Sparbetrag abzüglich der Steuer in der Höhe von 40%%."
+
+#: .\instructions\templates\instructions\Instruct4_deferred.html:18
+#: .\instructions\templates\instructions\Instruct4_immediate.html:18
+#: .\instructions\templates\instructions\Instruct4_matching.html:18
+msgid "In each period, your <b>Reward</b> will be automatically calculated."
+msgstr ""
+"In jeder Periode wird Ihre Belohnung (in Punkten) automatisch berechnet."
+
+#: .\instructions\templates\instructions\Instruct4_deferred.html:20
+#: .\instructions\templates\instructions\Instruct4_immediate.html:20
+#: .\instructions\templates\instructions\Instruct4_matching.html:20
+msgid ""
+"For your final Reward, the computer will randomly select one period of one "
+"of your two lives.\n"
+"        The <b>Reward</b> (in points) in that period will be exchanged for "
+"Euros at a rate of <b>&euro; 1.00 = 25 points</b>."
+msgstr ""
+"Um Ihre Belohnung in Euros für dieses Experiment zu bestimmen, wird der "
+"Computer zuerst eine Periode von beiden Leben zufällig auswählen. Ihre "
+"Belohnung (in Punkten) in der gewählten Periode wird mit einem Wechselkurs "
+"von <b>25 Punkten = 1 EUR</b> umgerechnet."
+
+#: .\instructions\templates\instructions\Instruct4_immediate.html:13
+#: .\instructions\templates\instructions\Instruct4_matching.html:13
+msgid ""
+"In <b>working periods</b>,\n"
+"        your <b>Reward</b> will be the difference between your <b>Net Wage</"
+"b> and your <b>Savings</b>."
+msgstr ""
+"In jeder Periode während der Arbeitsphase entspricht Ihre Belohnung (in "
+"Punkten) Ihrem Nettolohn abzüglich des Betrags, den Sie sparen."
+
+#: .\instructions\templates\instructions\Instruct4_immediate.html:16
+msgid ""
+"In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b>."
+msgstr ""
+"In der Ruhestandsphase entspricht Ihre Belohnung (in Punkten) dem bezogenen "
+"Sparbetrag."
 
 #: .\instructions\templates\instructions\Intro.html:19
 msgid "Welcome!"
-msgstr ""
+msgstr "Willkommen!"
 
 #: .\instructions\templates\instructions\Intro.html:21
 msgid ""
@@ -45,6 +292,8 @@ msgid ""
 "        you will participate in a <b>simulation</b> where you will be asked "
 "to make <b>financial decisions</b>."
 msgstr ""
+"In dieser Studie werden Sie im Rahmen einer <b>Simulation</b> verschiedene "
+"<b>finanzielle Entscheidungen</b> treffen."
 
 #: .\instructions\templates\instructions\Intro.html:24
 msgid ""
@@ -53,6 +302,10 @@ msgid ""
 "EUR 5 and EUR 15 on average.\n"
 "        Higher or lower amounts are also possible."
 msgstr ""
+"Je nachdem wie Sie sich entscheiden, werden Sie <b>zusätzlich</b> zu Ihrer "
+"Grundvergütung eine <b>Belohnung</b> bekommen können. Diese zusätzliche "
+"Belohnung ist in den meisten Fällen zwischen <b>EUR 5</b> und <b>EUR 15</b>. "
+"Höhere bzw. tiefe Beträge sind aber auch möglich."
 
 #: .\instructions\templates\instructions\Intro.html:28
 msgid ""
@@ -63,31 +316,89 @@ msgid ""
 "        you will be asked to correctly answer a <b>quiz</b> on the "
 "simulation's rules."
 msgstr ""
+"Um Ihre finanzielle Entschädigung für diese Studie zu maximieren, bitten wir "
+"Sie zuerst die <b>Instruktionen</b> aufmerksam zu lesen. Danach werden Sie "
+"an einer <b>Proberunde</b> teilnehmen. Bevor Sie die reale Simulation "
+"beginnen, werden Sie ein Paar <b>Testfragen</b> zu den Regeln der Simulation "
+"beantworten."
 
 #: .\instructions\templates\instructions\Intro.html:33
 msgid ""
 "Only participants <b>correctly</b> answering the quiz questions will be\n"
 "        admitted to the real simulation and earn compensation."
 msgstr ""
+"<b>Nur</b> Teilenehmende, die diese Fragen <b>korrekt</b> beantworten, "
+"werden zu der realen Simulation zugelassen."
 
 #: .\instructions\templates\instructions\Intro.html:36
 msgid ""
 "The simulation must be completed <b>without long interruptions</b>.\n"
 "        Please, only start the simulation if you have enough time."
 msgstr ""
+"Falls Sie zu der realen Simulation zugelassen werden, müssen Sie Ihre "
+"Entscheidungen <b>ohne</b> große zeitliche Unterbrüche treffen. Wir bitten "
+"Sie die Simulation nur dann zu starten, wenn Sie genügend Zeit haben diese "
+"abzuschließen."
 
 #: .\instructions\templates\instructions\Intro.html:39
 msgid "Do you want to start the simulation?"
-msgstr ""
+msgstr "Möchten Sie die Simulation jetzt starten?"
 
 #: .\instructions\templates\instructions\Intro.html:41
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: .\instructions\templates\instructions\Intro.html:43
 msgid "No"
-msgstr ""
+msgstr "Nein"
 
 #: .\instructions\templates\instructions\Intro.html:46
 msgid "Next"
-msgstr ""
+msgstr "Weiter"
+
+#~ msgid ""
+#~ "\n"
+#~ "    <p>In each period while you work,\n"
+#~ "        you will decide how much of your <b>Net Wage</b> to put on "
+#~ "<b>Savings</b> for the rest phase.</p>\n"
+#~ "\n"
+#~ "    <p>Your <b>Savings</b> will earn 5%% interest per period.</p>\n"
+#~ "\n"
+#~ "    <p>You will receive your <b>Savings</b> including accumulated "
+#~ "interest back during the <b>rest phase</b>.\n"
+#~ "        The computer will automatically calculate equal <b>Withdraw</b> "
+#~ "per each period of the rest phase.</p>\n"
+#~ "\n"
+#~ "    <p>Savings <b>Withdraws</b> in the <b>rest phase</b> are tax-free.</"
+#~ "p>\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "<p>Solange Sie arbeiten, werden Sie in jeder Periode entscheiden wie viel "
+#~ "Sie von Ihrem Nettolohn für die Ruhestandsphase <b>sparen</b> wollen.</"
+#~ "p>\n"
+#~ "\n"
+#~ "<p>Der Sparbetrag wird bis zur Auszahlung in der Ruhestandsphase mit 5% "
+#~ "pro Periode verzinst (inkl. Zinseszinsen). Der <b>Bezug</b> der "
+#~ "Ersparnisse in der Ruhestandsphase ist <b>steuerfrei</b>.</p>\n"
+#~ "\n"
+#~ "<p>Für jede Periode in der Arbeitsphase wird der Computer automatisch "
+#~ "berechnen wie viele Ersparnisse Sie bereits akkumuliert haben. Der Bezug "
+#~ "der Ersparnisse in der Ruhestandsphase wird auf alle Perioden dieser "
+#~ "Phase gleichmäßig verteilt. In der Ruhestandsphase werden Sie somit keine "
+#~ "Entscheidungen mehr treffen.</p>"
+
+#~ msgid "<b>Net Wage</b>"
+#~ msgstr "in jeder Periode entscheiden wie viel Sie von Ihrem"
+
+#~ msgid " to put on "
+#~ msgstr " Nettolohn "
+
+#~ msgid "<b>Savings</b>"
+#~ msgstr "für die Ruhestandsphase"
+
+#~ msgid " for the rest phase."
+#~ msgstr " <b>sparen</b> wollen."
+
+#~ msgid "Your <b>"
+#~ msgstr "Der"

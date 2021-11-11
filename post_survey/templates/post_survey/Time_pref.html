@@ -12,21 +12,19 @@
         </div>
     {% endif %}
 
-    <h3><br>Task 2/2</h3>
+    <h3><br>{% blocktrans %}Task{% endblocktrans %} 2/2</h3>
 
-    <p>In the following we offer you a bonus, in additional to your rewards with this game.
-        If you are interested, we will send you a second invitation, which you just need to accept.
-        After accepting, your rewards and the bonus will be immediately paid into your account.</p>
+    <p>{% blocktrans %}In the following we offer you a bonus, in additional to your rewards with this game.{% endblocktrans %}</p>
 
-    <p>Which option do you prefer?</p>
+    <p>{% blocktrans %}Which option do you prefer?{% endblocktrans %}</p>
     &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="time1" name="time_choice" value="delay0">
-    <label for="time1">My rewards now, no bonus.</label><br>
+    <label for="time1">{% blocktrans %}My rewards now, no bonus.{% endblocktrans %}</label><br>
     &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="time2" name="time_choice" value="delay1">
-    <label for="time2">My rewards plus 5.0% bonus, in one month.</label><br>
+    <label for="time2">{% blocktrans %}My rewards plus 5.0% bonus, in one month.{% endblocktrans %}</label><br>
     &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="time3" name="time_choice" value="delay2">
-    <label for="time3">My rewards plus 10.3% bonus, in two months.</label><br>
+    <label for="time3">{% blocktrans %}My rewards plus 10.3% bonus, in two months.{% endblocktrans %}</label><br>
     &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="time4" name="time_choice" value="delay3">
-    <label for="time4">My rewards plus 15.8% bonus, in three months.</label><br><br>
+    <label for="time4">{% blocktrans %}My rewards plus 15.8% bonus, in three months.{% endblocktrans %}</label><br><br>
 
     {% next_button %}
 

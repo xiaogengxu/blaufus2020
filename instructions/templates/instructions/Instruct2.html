@@ -7,13 +7,13 @@
 {% block content %}
     <h3>
     <br>
-    Wage Tax
+    {% blocktrans %}Wage Tax{% endblocktrans %}
     </h3>
 
-    <p>Your <b>Wage</b> will be subject to a <b>Tax</b> of 40%.
-        The Tax will be deducted from your Wage.</p>
+    <p>{% blocktrans %}Your <b>Wage</b> will be subject to a <b>Tax</b> of 40%.
+        The Tax will be deducted from your Wage.{% endblocktrans %}</p>
 
-    <p>Your <b>Net Wage</b> will be your Wage minus <b>Tax</b>.</p>
+    <p>{% blocktrans %}Your <b>Net Wage</b> will be your Wage minus <b>Tax</b>.{% endblocktrans %}</p>
 
     {% next_button %}
 

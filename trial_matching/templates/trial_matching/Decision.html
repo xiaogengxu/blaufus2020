@@ -13,7 +13,7 @@
 
     <h3>
     <br>
-    Trial life: Period {{ round_num }}/15 (working phase)
+    {% blocktrans %}Trial life{% endblocktrans %}: {% blocktrans %}Period{% endblocktrans %} {{ round_num }}/15 ({% blocktrans %}working phase{% endblocktrans %})
     </h3>
 
     {% if form.errors %}
@@ -22,16 +22,16 @@
         </div>
     {% endif %}
 
-    <p>You completed your work task and earned a Wage of 480 points.</p>
+    <p>{% blocktrans %}You completed your work task and earned a Wage of 480 points.{% endblocktrans %}</p>
 
     <div id="show_p2">
-    <p>From Periods 1 to {{ round_num_show }}, you have saved on average {{ avg_list }} points per period.</p>
+    <p>{% blocktrans %}From Periods 1 to {{ round_num_show }}, you have saved on average {{ avg_list }} points per period.{% endblocktrans %}</p>
 
-    <p>If in the next working periods you maintain this level of savings,
-        your after-tax Payoff during the rest phase will be {{ rest_points }} points per period.</p>
+    <p>{% blocktrans %}If in the next working periods you maintain this level of savings,
+        your after-tax Payoff during the rest phase will be {{ rest_points }} points per period.{% endblocktrans %}</p>
     </div>
 
-    <p>Please tap and move on the slider below to indicate how much you would like to save in current Period.</p>
+    <p>{% blocktrans %}Please tap and move on the slider below to indicate how much you would like to save in current Period.{% endblocktrans %}</p>
 
     <input type="hidden" name="saving_mat" value="" id="myRange"/>
     <input type="hidden" name="check_mat" value="" id="id_check"/>
@@ -86,7 +86,7 @@
                         ?
                     </a>
                 </th>
-                <th>{% blocktrans%}Matching contribution{% endblocktrans %}
+                <th>{% blocktrans%}Bonus{% endblocktrans %}
                     <a class="noclick" id="id_tooltip5" href="#" data-toggle="tooltip" data-placement="right"
                             title="
                             {% blocktrans %}extra bonus (in points) added to your Savings Balance (66.67% of Savings){% endblocktrans %}">
@@ -103,7 +103,7 @@
                 <th>{% blocktrans %}Savings Balance{% endblocktrans %}
                     <a class="noclick" id="id_tooltip7" href="#" data-toggle="tooltip" data-placement="right"
                             title="
-                            {% blocktrans %}Points you own at the end of the period in your Savings account, plus Matching Contribution. This balance earns 5% interest at the end of each period (credited automatically).{% endblocktrans %}">
+                            {% blocktrans %}Points you own at the end of the period in your Savings account, plus bonus. This balance earns 5% interest at the end of each period (credited automatically).{% endblocktrans %}">
                         ?
                     </a>
                 </th>

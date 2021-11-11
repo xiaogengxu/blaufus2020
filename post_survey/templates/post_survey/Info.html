@@ -8,7 +8,7 @@
 
     <h3>
     <br>
-        Demographic Questionnaire
+        {% blocktrans %}Demographic Questionnaire{% endblocktrans %}
     </h3>
 
     {% if form.errors %}
@@ -17,10 +17,10 @@
         </div>
     {% endif %}
 
-    <p>Before we proceed, we would like you to answer a few background questions.
+    <p>{% blocktrans %}Before we proceed, we would like you to answer a few background questions.
         With these questions we would like to evaluate how well the participants in this study
         represent the whole population.
-        Your answers have no effect on your reward.</p>
+        Your answers have no effect on your reward.{% endblocktrans %}</p>
 
     {% formfields %}
 

@@ -13,7 +13,7 @@
 
     <h3>
     <br>
-    life {{ life }}: Period {{ round_num_title }}/15 (working phase)
+    {% blocktrans %}life{% endblocktrans %} {{ life }}: {% blocktrans %}Period{% endblocktrans %} {{ round_num_title }}/15 ({% blocktrans %}working phase{% endblocktrans %})
     </h3>
 
     {% if form.errors %}
@@ -22,8 +22,8 @@
         </div>
     {% endif %}
 
-    <p>Set all five sliders below to number {{ slide_moveto }}.
-        Once you correctly positioned all sliders, click on "Submit" to collect your <b>Wage</b>.</p>
+    <p>{% blocktrans %}Set all five sliders below to number {{ slide_moveto }}.
+        Once you correctly positioned all sliders, click on "Submit" to collect your <b>Wage</b>.{% endblocktrans %}</p>
 
     <input type="hidden" value="" id="myRange_spend1"/>
     <input type="hidden" value="" id="myRange_spend2"/>
@@ -43,7 +43,7 @@
         <div type="range" class="noUiSlider" id="slider3" style="display: inline-block"></div></div>
     <br><br>
 
-    <button class="otree-btn-next btn btn-primary" id="btn1" onclick="myFunction()">Submit</button>
+    <button class="otree-btn-next btn btn-primary" id="btn1" onclick="myFunction()">{% blocktrans %}Submit{% endblocktrans %}</button>
 
     <br><br>
     {% include 'immediate/includes/tabs.html' %}
@@ -79,11 +79,11 @@
         animate: false,
         range: {
             'min': 0,
-            'max': 50
+            'max': 30
         },
         pips: {
             mode: 'values',
-            values: [0, 50],
+            values: [0, 30],
             density: 100
         }
         });
@@ -98,11 +98,11 @@
         animate: false,
         range: {
             'min': 0,
-            'max': 50
+            'max': 30
         },
         pips: {
             mode: 'values',
-            values: [0, 50],
+            values: [0, 30],
             density: 100
         }
         });
@@ -117,11 +117,11 @@
         animate: false,
         range: {
             'min': 0,
-            'max': 50
+            'max': 30
         },
         pips: {
             mode: 'values',
-            values: [0, 50],
+            values: [0, 30],
             density: 100
         }
         });
@@ -216,10 +216,7 @@
             height: 7px;
         }
         .noUiSlider {
-            width: 500px;
-        }
-        #div1 {
-            margin-left: 50px;
+            width: 600px;
         }
         #div1 {
             margin-left: 50px;

@@ -58,7 +58,7 @@ class Player(BasePlayer):
                                   'On the Job Training)')),
                  ('bachelor', _('Bachelor, Qualification from trade and technical schools')),
                  ('master', _('Master, Diploma (Teachers\' Examination, Magister)')),
-                 ('doctor', _('Doctor\'s degree')),
+                 ('doctor', _('PhD, Doctor\'s degree')),
                  ('no_qualification', _('No vocational qualification attained')),
                  ('no_answer', _('no answer'))],
         blank=True
@@ -67,9 +67,9 @@ class Player(BasePlayer):
         label=_('Did you take part in lectures, courses, '
                 'or further training about finance or the handling of money during your school or vocational training?'),
         widget=widgets.RadioSelect,
-        choices=[('yes', _('yes, participated')),
-                 ('no', _('no, did not participate')),
-                 ('no_answer', _('no answer'))]
+        choices=[('yes', _('Yes, participated')),
+                 ('no', _('No, did not participate')),
+                 ('no_answer', _('No answer'))]
     )
     income = models.StringField(
         label=_('What do you estimate is your household\'s MONTHLY net disposable income, that is, '
@@ -77,12 +77,12 @@ class Player(BasePlayer):
                 'and social security contributions to cover expenses?'),
         widget=widgets.RadioSelect,
         choices=[
-            ('below400', _('under EUR 400')), ('below800', _('between EUR 400 and EUR 800')),
-            ('below1200', _('between EUR 800 and EUR 1200')), ('below1600', _('between EUR 1200 and EUR 1600')),
-            ('below2000', _('between EUR 1600 and EUR 2000')), ('below2400', _('between EUR 2000 and EUR 2400')),
-            ('below2800', _('between EUR 2400 and EUR 2800')), ('below3200', _('between EUR 2800 and EUR 3200')),
-            ('below3600', _('between EUR 3200 and EUR 3600')), ('below4000', _('between EUR 3600 and EUR 4000')),
-            ('over4000', _('over EUR 4000')), ('no_answer', _('no answer'))],
+            ('below400', _('Less than EUR 400')), ('below800', _('EUR 400 until EUR 800')),
+            ('below1200', _('EUR 800 until EUR 1200')), ('below1600', _('EUR 1200 until EUR 1600')),
+            ('below2000', _('EUR 1600 until EUR 2000')), ('below2400', _('EUR 2000 until EUR 2400')),
+            ('below2800', _('EUR 2400 until EUR 2800')), ('below3200', _('EUR 2800 until EUR 3200')),
+            ('below3600', _('EUR 3200 until EUR 3600')), ('below4000', _('EUR 3600 until EUR 4000')),
+            ('over4000', _('More than EUR 4000')), ('no_answer', _('No answer'))],
         blank=True
     )
 

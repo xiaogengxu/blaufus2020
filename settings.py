@@ -5,7 +5,7 @@ SESSION_CONFIGS = [
     {
         'name': 'Blaufus2020',
         'display_name': 'Blaufus2020',
-        'num_demo_participants': 100,
+        'num_demo_participants': 20,
         'app_sequence': ['instructions', 'trial_immediate', 'trial_deferred', 'trial_matching',
                          'quiz', 'immediate', 'deferred', 'matching', 'post_survey', 'result'],
         'language': 'de',

@@ -8,27 +8,29 @@
 
     <h3>
     <br>
-        Summary
+        {% blocktrans %}Summary{% endblocktrans %}
     </h3>
 
-    <p>You have finished all activities.</p>
+    <p>{% blocktrans %}You have finished all activities.{% endblocktrans %}</p>
 
-    <p>For additional compensation, Period {{ reward_period }} of life {{ reward_life }} was chosen.
-        Your reward on that period was {{ reward_euro }} Euro.</p>
+    <p>{% blocktrans %}For additional compensation, Period {{ reward_period }} of life {{ reward_life }} was chosen.
+        Your reward on that period was {{ reward_euro }} Euro.{% endblocktrans %}</p>
 
     <p>
-        You chose to invest {{ risk_choice }}% (or {{ invest }} Euro) in the risky investment.
+        {% blocktrans %}You chose to invest {{ risk_choice }}% (or {{ invest }} Euro) in the risky investment.
         The result of the risky investment is "{{ risk_outcome }}".
         You get {{ earn_invest }} Euro from the investment.
-        Your total reward is {{ total }} Euro.
+        Your total reward is {{ total }} Euro.{% endblocktrans %}
     </p>
 
     <p>
-        You chose to receive the additional compensation {{ pay_time }}.
+        {% blocktrans %}You chose to receive the additional compensation {{ pay_time }}.
         Therefore, you get an additional bonus of {{ bonus_time }} Euros.
         Your total final additional reward is {{ total1 }} Euros.
-        You will receive this reward {{ pay_time }}. No further action is needed.
+        You will receive this reward {{ pay_time }}. No further action is needed.{% endblocktrans %}
     </p>
+
+    <p>{% blocktrans %}Click on Finish to collect your additional compensation.{% endblocktrans %}</p>
 
     <br>
 

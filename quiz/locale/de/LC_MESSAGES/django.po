@@ -3,97 +3,104 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 21:05+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2021-11-11 22:09+0200\n"
+"PO-Revision-Date: 2021-11-11 22:16+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: .\quiz\models.py:44
 msgid "1. What decision do you make each period during the working phase?"
-msgstr ""
+msgstr "1. Welche Entscheidungen treffen Sie während der Arbeitsphase?"
 
 #: .\quiz\models.py:49
 msgid "2. What decision do you make each period during the rest phase?"
-msgstr ""
+msgstr "2. Welche Entscheidungen treffen Sie während der Ruhestandsphase?"
 
 #: .\quiz\models.py:54
 msgid "3. What is the Tax rate?"
-msgstr ""
+msgstr "3. Wie hoch sind die Steuern?"
 
 #: .\quiz\models.py:59
 msgid "4. What happen to your Savings during the rest phase?"
-msgstr ""
+msgstr "4. Was passiert mit Ihren Ersparnissen während der Ruhestandsphase?"
 
 #: .\quiz\models.py:64
 msgid "5. What determines your additional compensation?"
-msgstr ""
+msgstr "5. Wovon hängt Ihre Vergütung ab, die Sie für Ihre Teilnahme bekommen?"
 
 #: .\quiz\pages.py:18 .\quiz\pages.py:24 .\quiz\pages.py:117
 #: .\quiz\pages.py:123
 msgid "How much to work"
-msgstr ""
+msgstr "Ich bestimme meine Arbeitszeit"
 
 #: .\quiz\pages.py:18 .\quiz\pages.py:24 .\quiz\pages.py:117
 #: .\quiz\pages.py:123
 msgid "How much to save"
-msgstr ""
+msgstr "Ich bestimme wie viel ich sparen möchte"
 
 #: .\quiz\pages.py:19 .\quiz\pages.py:25 .\quiz\pages.py:118
 #: .\quiz\pages.py:124
 msgid "I make no decision during working phase."
-msgstr ""
+msgstr "Während der Arbeitsphase treffe ich keine Entscheidungen."
 
 #: .\quiz\pages.py:37 .\quiz\pages.py:136
 msgid "My Savings are lost."
-msgstr ""
+msgstr "Meine Ersparnisse gehen verloren."
 
 #: .\quiz\pages.py:38 .\quiz\pages.py:137
 msgid "My Savings are returned to me."
-msgstr ""
+msgstr "Ich kann meine Ersparnisse beziehen."
 
 #: .\quiz\pages.py:39 .\quiz\pages.py:138
 msgid "My Savings are used to pay back loans from the working phase."
 msgstr ""
+"Meine Ersparnisse werden genutzt, um allfällige Schulden von der "
+"Arbeitsphase zu begleichen."
 
 #: .\quiz\pages.py:45 .\quiz\pages.py:144
 msgid ""
 "The cumulative interest I earned on my Savings at the end of one randomly "
 "selected life."
 msgstr ""
+"Von den akkumulierten Zinsen auf meinen Ersparnissen am Ende einer zufällig "
+"gewählten Periode aller Leben."
 
 #: .\quiz\pages.py:46 .\quiz\pages.py:145
 msgid ""
 "The Reward points in one randomly selected period of one randomly selected "
 "life."
 msgstr ""
+"Von der Belohnung (in Punkten) in einer zufällig gewählten Periode aller "
+"Leben."
 
 #: .\quiz\pages.py:47 .\quiz\pages.py:146
 msgid ""
 "The Net Wage I earned in one randomly selected period of one randomly "
 "selected life."
-msgstr ""
+msgstr "Vom Nettolohn in einer zufällig gewählten Periode aller Leben."
 
 #: .\quiz\pages.py:54
 msgid "Please answer all questions."
-msgstr ""
+msgstr "Bitte beantworten Sie alle Fragen."
 
 #: .\quiz\pages.py:161
 msgid "Please answer the question."
-msgstr ""
+msgstr "Bitte beantworten Sie die Frage."
 
 #: .\quiz\templates\quiz\End_attempt1.html:9
 #: .\quiz\templates\quiz\End_attempt2.html:9
 msgid "Ineligible to participate"
-msgstr ""
+msgstr "Leider endet die Simulation hier für Sie"
 
 #: .\quiz\templates\quiz\End_attempt1.html:12
 #: .\quiz\templates\quiz\End_attempt2.html:12
@@ -105,15 +112,18 @@ msgid ""
 "            Thus, we regret to inform that you are unable to participate in "
 "the simulation."
 msgstr ""
+"Wir danken Ihnen für Ihre Teilnahme. Leider haben Sie nicht alle Fragen des "
+"Quiz richtig beantwortet und können somit nicht an der wirklichen Simulation "
+"teilnehmen."
 
 #: .\quiz\templates\quiz\End_attempt1.html:18
 #: .\quiz\templates\quiz\End_attempt2.html:18
 msgid "Finish"
-msgstr ""
+msgstr "Fertig"
 
 #: .\quiz\templates\quiz\Quiz.html:15
 msgid "Quiz"
-msgstr ""
+msgstr "Quiz"
 
 #: .\quiz\templates\quiz\Quiz.html:18
 msgid ""
@@ -121,10 +131,13 @@ msgid ""
 "        If you have difficulties answering the questions, consult the "
 "instructions at the bottom of the page."
 msgstr ""
+"Bitte beantworten Sie die folgenden 5 Fragen zum Spiel. Wenn Ihnen die "
+"Beantwortung der Fragen schwerfällt, lesen Sie bitte die Anweisungen am Ende "
+"dieser Seite."
 
 #: .\quiz\templates\quiz\Quiz_retry.html:15
 msgid "Quiz: try again"
-msgstr ""
+msgstr "Quiz: zweiter Versuch"
 
 #: .\quiz\templates\quiz\Quiz_retry.html:17
 msgid ""
@@ -132,18 +145,23 @@ msgid ""
 "round.\n"
 "        There is a hint below."
 msgstr ""
+"Bitte beantworten Sie die Fragen noch einmal, bevor Sie in die wirkliche "
+"Runde kommen. Unten finden Sie einen Hinweis."
 
 #: .\quiz\templates\quiz\Quiz_retry.html:24
 msgid ""
-"Hint: <br>\n"
+"Hint of question 1: <br>\n"
 "        Following the work task, at each working period,\n"
 "            you will decide how much of your <b>Net Wage</b> to put on "
 "<b>Savings</b> for the rest phase."
 msgstr ""
+"Hinweis zu Frage 1: <br>\n"
+"Solange Sie arbeiten, werden Sie in jeder Periode entscheiden wie viel Sie "
+"von Ihrem Nettolohn für die Ruhestandsphase <b>sparen</b> wollen."
 
 #: .\quiz\templates\quiz\Quiz_retry.html:32
 msgid ""
-"Hint: <br>\n"
+"Hint of question 2: <br>\n"
 "            Your life will have two phases: a working phase (10 periods) and "
 "a rest phase (5 periods).\n"
 "                In the working phase, you will work, earn income, and decide "
@@ -151,72 +169,95 @@ msgid ""
 "                In the rest phase, you will not earn any income.\n"
 "                No decision is made in the rest phase."
 msgstr ""
+"Hinweis zu Frage 2: <br>\n"
+"Ihr simuliertes Leben wird zwei Phasen haben: eine <b>Arbeitsphase</b> von "
+"10 Perioden und eine <b>Ruhestandsphase</b> von 5 Perioden. In der "
+"Arbeitsphase werden Sie arbeiten und einen Lohn verdienen. In dieser Phase "
+"werden Sie auch entscheiden, wie viel Sie für die Ruhestandsphase sparen "
+"wollen. In der Ruhestandsphase werden Sie nicht arbeiten und deswegen keinen "
+"Lohn bekommen."
 
 #: .\quiz\templates\quiz\Quiz_retry.html:42
 #, python-format
 msgid ""
-"Hint: <br>\n"
+"Hint of question 3: <br>\n"
 "        Your <b>Wage</b> will be subject to a Tax of 40%%.\n"
 "            The Tax will be deducted from your Wage."
 msgstr ""
+"Hinweis zu Frage 3: <br>\n"
+"Ihr Arbeitslohn unterliegt einer Steuer in Höhe von 40%%, die direkt "
+"einbehalten wird."
 
 #: .\quiz\templates\quiz\Quiz_retry.html:50
 msgid ""
-"Hint: <br>\n"
+"Hint of question 4: <br>\n"
 "        You will receive your <b>Savings</b> including accumulated interest "
 "back during the <b>rest phase</b>."
 msgstr ""
+"Hinweis zu Frage 4: <br>\n"
+"Für jede Periode in der Arbeitsphase wird der Computer automatisch berechnen "
+"wie viele Ersparnisse Sie bereits akkumuliert haben. Der Bezug der "
+"Ersparnisse in der Ruhestandsphase wird auf alle Perioden dieser Phase "
+"gleichmäßig verteilt. In der Ruhestandsphase werden Sie somit keine "
+"Entscheidungen mehr treffen."
 
 #: .\quiz\templates\quiz\Quiz_retry.html:57
 msgid ""
-"Hint: <br>\n"
+"Hint of question 5: <br>\n"
 "        For your final Reward, the computer will randomly select one period "
 "of one of your two lives.\n"
 "            The <b>Reward</b> (in points) in that period will be exchanged "
 "for Euros at a rate of <b>&euro; 1.00 = 25 points</b>."
 msgstr ""
+"Hinweis zu Frage 5: <br>\n"
+"Um Ihre Belohnung in Euros für dieses Experiment zu bestimmen, wird der "
+"Computer zuerst eine Periode von beiden Leben zufällig auswählen. Ihre "
+"Belohnung (in Punkten) in der gewählten Periode wird mit einem Wechselkurs "
+"von <b>25 Punkten = 1 EUR</b> umgerechnet."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:8
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:6
 #: .\quiz\templates\quiz\includes\tabs_matching.html:8
 msgid "Instruction"
-msgstr ""
+msgstr "Anweisung"
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:9
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:7
 #: .\quiz\templates\quiz\includes\tabs_matching.html:9
 msgid "Experiment"
-msgstr ""
+msgstr "Experiment"
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:10
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:8
 #: .\quiz\templates\quiz\includes\tabs_matching.html:10
 msgid "Working phase"
-msgstr ""
+msgstr "Arbeitsphase"
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:11
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:9
 #: .\quiz\templates\quiz\includes\tabs_matching.html:11
 msgid "Tax"
-msgstr ""
+msgstr "Steuer"
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:12
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:10
 #: .\quiz\templates\quiz\includes\tabs_matching.html:12
 msgid "Savings"
-msgstr ""
+msgstr "Sparentscheidungen"
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:13
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:11
 #: .\quiz\templates\quiz\includes\tabs_matching.html:13
 msgid "Your reward"
-msgstr ""
+msgstr "Ihre Belohnung"
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:17
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:15
 #: .\quiz\templates\quiz\includes\tabs_matching.html:17
 msgid "Please click the other tabs to check the instruction if you want."
 msgstr ""
+"Bitte klicken Sie auf die anderen Registerkarten, um die Anweisungen zu "
+"überprüfen, wenn Sie möchten."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:21
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:19
@@ -224,6 +265,8 @@ msgstr ""
 msgid ""
 "In this experiment, you will decide how much to save during a simulated life."
 msgstr ""
+"In diesem Experiment werden Sie im Rahmen eines simulierten Lebens "
+"<b>Sparentscheidungen</b> treffen."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:23
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:21
@@ -234,12 +277,18 @@ msgid ""
 "        In the working phase, you will work, earn income, and decide how "
 "much to save. In the rest phase, you will not earn any income."
 msgstr ""
+"Ihr simuliertes Leben wird zwei Phasen haben: eine <b>Arbeitsphase</b> von "
+"10 Perioden und eine <b>Ruhestandsphase</b> von 5 Perioden. In der "
+"Arbeitsphase werden Sie arbeiten und einen Lohn verdienen. In dieser Phase "
+"werden Sie auch entscheiden, wie viel Sie für die Ruhestandsphase sparen "
+"wollen. In der Ruhestandsphase werden Sie nicht arbeiten und deswegen keinen "
+"Lohn bekommen."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:26
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:24
 #: .\quiz\templates\quiz\includes\tabs_matching.html:26
 msgid "You will have two lives."
-msgstr ""
+msgstr "Sie werden zwei Leben haben."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:30
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:28
@@ -248,6 +297,8 @@ msgid ""
 "At the beginning of each period of the <b>working phase</b>, you will work "
 "on a simple task."
 msgstr ""
+"In der <b>Arbeitsphase</b> werden Sie zu Beginn jeder Periode eine einfache "
+"Aufgabe bearbeiten."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:32
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:30
@@ -255,6 +306,8 @@ msgstr ""
 msgid ""
 "For each submitted task you will receive a fixed <b>Wage</b> of 480 points."
 msgstr ""
+"Für jede erfüllte Aufgabe werden Sie einen fixen <b>Lohn</b> von <b>480 "
+"Punkten</b> bekommen."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:36
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:34
@@ -264,12 +317,14 @@ msgid ""
 "Your <b>Wage</b> will be subject to a Tax of 40%%. The Tax will be deducted "
 "from your Wage."
 msgstr ""
+"Ihr Arbeitslohn unterliegt einer Steuer in Höhe von 40%%, die direkt "
+"einbehalten wird."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:38
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:36
 #: .\quiz\templates\quiz\includes\tabs_matching.html:38
 msgid "Your <b>Net Wage</b> will be your Wage minus <b>Tax</b>."
-msgstr ""
+msgstr "Ihr Arbeitslohn abzüglich der Steuer ergibt Ihren <b>Nettolohn</b>."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:42
 #: .\quiz\templates\quiz\includes\tabs_matching.html:42
@@ -278,12 +333,16 @@ msgid ""
 "        you will decide how much of your <b>Net Wage</b> to put on "
 "<b>Savings</b> for the rest phase."
 msgstr ""
+"Solange Sie arbeiten, werden Sie in jeder Periode entscheiden wie viel Sie "
+"von Ihrem Nettolohn für die Ruhestandsphase <b>sparen</b> wollen."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:45
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:43
 #, python-format
 msgid "Your <b>Savings</b> will earn 5%% interest per period."
 msgstr ""
+"Der Sparbetrag wird bis zur Auszahlung in der Ruhestandsphase mit 5%% pro "
+"Periode verzinst."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:47
 #, python-format
@@ -296,6 +355,8 @@ msgid ""
 "        For example, if you save 100 points in one period, you will receive "
 "40 points as a <b>Tax Refund</b> in that period."
 msgstr ""
+"Da der Betrag, den Sie sparen von Steuern befreit ist, erhalten Sie in jeder "
+"Periode eine <b>Steuererstattung</b> in Höhe von 40%% des Sparbetrags."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:52
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:45
@@ -305,14 +366,21 @@ msgid ""
 "        The computer will automatically calculate equal <b>Withdraw</b> per "
 "each period of the rest phase."
 msgstr ""
+"Für jede Periode in der Arbeitsphase wird der Computer automatisch berechnen "
+"wie viele Ersparnisse Sie bereits akkumuliert haben. Der Bezug der "
+"Ersparnisse in der Ruhestandsphase wird auf alle Perioden dieser Phase "
+"gleichmäßig verteilt. In der Ruhestandsphase werden Sie somit keine "
+"Entscheidungen mehr treffen."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:55
 #: .\quiz\templates\quiz\includes\tabs_matching.html:53
 #, python-format
 msgid ""
-"Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of 40%"
-"%."
+"Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of "
+"40%%."
 msgstr ""
+"Beim Bezug der Ersparnisse in der Ruhestandsphase werden Sie eine Steuer in "
+"Höhe von 40%% zahlen."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:59
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:52
@@ -322,6 +390,8 @@ msgid ""
 "        your <b>Reward</b> will be the difference between your <b>Net Wage</"
 "b> and your <b>Savings</b>."
 msgstr ""
+"In jeder Periode während der Arbeitsphase entspricht Ihre Belohnung (in "
+"Punkten) Ihrem Nettolohn abzüglich des Betrags, den Sie sparen."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:62
 #: .\quiz\templates\quiz\includes\tabs_matching.html:60
@@ -330,12 +400,15 @@ msgid ""
 "In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b> "
 "minus its <b>Tax</b> of 40%%."
 msgstr ""
+"In der Ruhestandsphase entspricht Ihre Belohnung (in Punkten) dem bezogenen "
+"Sparbetrag abzüglich der Steuer in der Höhe von 40%%."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:64
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:57
 #: .\quiz\templates\quiz\includes\tabs_matching.html:62
 msgid "In each period, your <b>Reward</b> will be automatically calculated."
 msgstr ""
+"In jeder Periode wird Ihre Belohnung (in Punkten) automatisch berechnet."
 
 #: .\quiz\templates\quiz\includes\tabs_deferred.html:66
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:59
@@ -346,6 +419,10 @@ msgid ""
 "        The <b>Reward</b> (in points) in that period will be exchanged for "
 "Euros at a rate of <b>&euro; 1.00 = 25 points</b>."
 msgstr ""
+"Um Ihre Belohnung in Euros für dieses Experiment zu bestimmen, wird der "
+"Computer zuerst eine Periode von beiden Leben zufällig auswählen. Ihre "
+"Belohnung (in Punkten) in der gewählten Periode wird mit einem Wechselkurs "
+"von <b>25 Punkten = 1 EUR</b> umgerechnet."
 
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:40
 msgid ""
@@ -353,15 +430,21 @@ msgid ""
 "        you will decide how much of your <b>Net Wage</b> to put on "
 "<b>Savings</b> for the rest phase."
 msgstr ""
+"Solange Sie arbeiten, werden Sie in jeder Periode entscheiden wie viel Sie "
+"von Ihrem Nettolohn für die Ruhestandsphase <b>sparen</b> wollen."
 
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:48
 msgid "Savings <b>Withdraws</b> in the <b>rest phase</b> are tax-free."
 msgstr ""
+"Der <b>Bezug</b> der Ersparnisse in der Ruhestandsphase ist <b>steuerfrei</"
+"b>."
 
 #: .\quiz\templates\quiz\includes\tabs_immediate.html:55
 msgid ""
 "In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b>."
 msgstr ""
+"In der Ruhestandsphase entspricht Ihre Belohnung (in Punkten) dem bezogenen "
+"Sparbetrag."
 
 #: .\quiz\templates\quiz\includes\tabs_matching.html:45
 #, python-format
@@ -369,11 +452,15 @@ msgid ""
 "You will receive a <b>bonus</b> of 66.67%% over the amount saved.\n"
 "        For example, if you save 100 points, your bonus will be 67 points."
 msgstr ""
+"Auf den Betrag, den Sie in jeder Periode sparen, erhalten Sie ein Bonus von "
+"66.67%%."
 
 #: .\quiz\templates\quiz\includes\tabs_matching.html:48
 #, python-format
 msgid "All your <b>Savings</b> earn 5%% interest per period."
 msgstr ""
+"Ihre Ersparnisse werden bis zum Beginn der Ruhestandsphase mit 5%% pro "
+"Periode verzinst."
 
 #: .\quiz\templates\quiz\includes\tabs_matching.html:50
 msgid ""
@@ -381,3 +468,8 @@ msgid ""
 "        The computer will automatically calculate equal <b>Withdraw</b> per "
 "each period of the rest phase."
 msgstr ""
+"Für jede Periode in der Arbeitsphase wird der Computer automatisch berechnen "
+"wie viele Ersparnisse Sie bereits akkumuliert haben. Der Bezug der "
+"Ersparnisse in der Ruhestandsphase wird auf alle Perioden dieser Phase "
+"gleichmäßig verteilt. In der Ruhestandsphase werden Sie somit keine "
+"Entscheidungen treffen."

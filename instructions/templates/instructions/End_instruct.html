@@ -6,16 +6,16 @@
 
 {% block content %}
     <h3>
-    <br>
-    Ineligible to participate
+        <br>
+        {% blocktrans %}Ineligible to participate{% endblocktrans %}
     </h3>
 
-    <p>You advanced through the Instruction screens faster than a skilled reader would take to read them carefully.
-        Participants must pay attention and understand the Instructions in order to participate.</p>
+    <p>{% blocktrans %}You advanced through the Instruction screens faster than a skilled reader would take to read them carefully.
+        Participants must pay attention and understand the Instructions in order to participate.{% endblocktrans %}</p>
 
-    <p>Therefore, we regret to inform that you are unable to continue.</p>
+    <p>{% blocktrans %}Therefore, we regret to inform that you are unable to continue.{% endblocktrans %}</p>
 
-    <button class="otree-btn-next btn btn-primary" id="btn1">Finish</button>
+    <button class="otree-btn-next btn btn-primary" id="btn1" onclick="NewTab()">{% blocktrans %}Finish{% endblocktrans %}</button>
     <br></br>
 
     <div class="progress">
@@ -24,6 +24,12 @@
             <span class="sr-only">100% Complete</span>
         </div>
     </div>
+
+    <script>
+        function NewTab() {
+            window.open(js_vars.url, "_blank");
+        }
+    </script>
 
     <style>
         .otree-title {

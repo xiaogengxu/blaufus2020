@@ -1,0 +1,40 @@
+{% extends "instructions/Page.html" %}
+{% load otree i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <h3>
+    <br>
+    {% blocktrans %}Your Reward{% endblocktrans %}
+    </h3>
+
+    <p>{% blocktrans %}In <b>working periods</b>,
+        your <b>Reward</b> will be the difference between your <b>Net Wage</b> and your <b>Savings, plus the tax refund</b>.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}In <b>rest periods</b>, your <b>Reward</b> will equal the <b>Withdraw</b> minus its <b>Tax</b> of 40%.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}In each period, your <b>Reward</b> will be automatically calculated.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}For your final Reward, the computer will randomly select one period of one of your two lives.
+        The <b>Reward</b> (in points) in that period will be exchanged for Euros at a rate of <b>&euro; 1.00 = 25 points</b>.{% endblocktrans %}</p>
+
+    {% next_button %}
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1"
+            aria-valuemin="0" aria-valuemax="100" style="width:10%">
+            <span class="sr-only">1% Complete</span>
+        </div>
+    </div>
+
+    <style>
+        .otree-title {
+            display: none;
+        }
+    </style>
+
+{% endblock %}
+
+

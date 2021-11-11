@@ -37,9 +37,9 @@ class Subsession(BaseSubsession):
             slide_list = []
             for j in range(1, 11):
                 str_slide = 'slide_moveto_trial%s' % j
-                slide_num = random.choice(range(1, 51))
+                slide_num = random.choice(range(1, 31))
                 while slide_num in slide_list:
-                    slide_num = random.choice(range(1, 51))
+                    slide_num = random.choice(range(1, 31))
                 else:
                     player.participant.vars[str_slide] = slide_num
                     slide_list.append(slide_num)

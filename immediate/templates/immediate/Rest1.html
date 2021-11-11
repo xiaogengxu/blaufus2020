@@ -7,7 +7,7 @@
 {% block content %}
     <h3>
     <br>
-    life {{ life }}: Period {{ round_num }}/15 (rest phase)
+    {% blocktrans %}life{% endblocktrans %} {{ life }}: {% blocktrans %}Period{% endblocktrans %} {{ round_num }}/15 ({% blocktrans %}rest phase{% endblocktrans %})
     </h3>
 
     {% if form.errors %}
@@ -17,13 +17,13 @@
     {% endif %}
 
     <div id="show_p11">
-    <p>You finished your working phase. Your total Savings and accumulated interest are {{ balance10 }} points.</p>
+    <p>{% blocktrans %}You finished your working phase. Your total Savings and accumulated interest are {{ balance10 }} points.{% endblocktrans %}</p>
 
-    <p>On each rest phase period, there will be an automatic <b>Withdrawn</b>, at equal amounts per period.
-        <b>Withdraws</b> are tax-free.</p>
+    <p>{% blocktrans %}On each rest phase period, there will be an automatic <b>Withdrawn</b>, at equal amounts per period.
+        <b>Withdraws</b> are tax-free.{% endblocktrans %}</p>
     </div>
 
-    <p>In this period, {{ rest_reward }} points were withdrawn from your <b>Savings Balance</b>.</p>
+    <p>{% blocktrans %}In this period, {{ rest_reward }} points were withdrawn from your <b>Savings Balance</b>.{% endblocktrans %}</p>
 
     <table id="info_table" style="width: 73%">
         <colgroup>

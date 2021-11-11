@@ -5,6 +5,7 @@ from sympy.solvers import solve
 from sympy import Symbol
 from .generic_pages import Page
 from django.utils.translation import ugettext_lazy as _
+from django.utils.text import format_lazy
 
 
 class Start(Page):
@@ -27,7 +28,10 @@ class Task(Page):
         if not values['task_finished']:
             round_num = self.player.round_number
             str_slide = 'slide_moveto_trial'+str(round_num)
-            return _('Your sliders are not all set to target number '+str(self.participant.vars[str_slide])+'. Please, try again.')
+            str1 = _('Your sliders are not all set to target number ')
+            str2 = _('. Please, try again.')
+            str_error = format_lazy('{}{}{}', str1, str(self.participant.vars[str_slide]), str2)
+            return str_error
 
     def vars_for_template(self):
         round_num = self.player.round_number
