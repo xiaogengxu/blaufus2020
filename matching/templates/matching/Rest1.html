@@ -7,7 +7,7 @@
 {% block content %}
     <h3>
     <br>
-    {% blocktrans %}life{% endblocktrans %} {{ life }}: {% blocktrans %}Period{% endblocktrans %} {{ round_num }}/15 ({% blocktrans %}rest phase{% endblocktrans %})
+    {% blocktrans %}Life{% endblocktrans %} {{ life }}: {% blocktrans %}Period{% endblocktrans %} {{ round_num }}/15 ({% blocktrans %}rest phase{% endblocktrans %})
     </h3>
 
     {% if form.errors %}
@@ -76,7 +76,7 @@
                 <th>{% blocktrans%}Bonus{% endblocktrans %}
                     <a class="noclick" id="id_tooltip5" href="#" data-toggle="tooltip" data-placement="right"
                             title="
-                            {% blocktrans %}extra bonus (in points) added to your Savings Balance (66.67% of Savings){% endblocktrans %}">
+                            {% blocktrans %}Extra bonus (in points) added to your Savings Balance (66.67% of Savings){% endblocktrans %}">
                         ?
                     </a>
                 </th>
@@ -194,7 +194,7 @@
             </tr>
             <tr>
                 <td><span id="arrow11"></span></td>
-                <td>11</td><td>480</td><td>192</td><td>288</td>
+                <td>11</td><td></td><td><span id="tax11"></span></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward11"></span></td>
@@ -203,7 +203,7 @@
             </tr>
             <tr>
                 <td><span id="arrow12"></span></td>
-                <td>12</td><td>480</td><td>192</td><td>288</td>
+                <td>12</td><td></td><td><span id="tax12"></span></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward12"></span></td>
@@ -212,7 +212,7 @@
             </tr>
             <tr>
                 <td><span id="arrow13"></span></td>
-                <td>13</td><td>480</td><td>192</td><td>288</td>
+                <td>13</td><td></td><td><span id="tax13"></span></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward13"></span></td>
@@ -221,7 +221,7 @@
             </tr>
             <tr>
                 <td><span id="arrow14"></span></td>
-                <td>14</td><td>480</td><td>192</td><td>288</td>
+                <td>14</td><td></td><td><span id="tax14"></span></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward14"></span></td>
@@ -230,7 +230,7 @@
             </tr>
             <tr>
                 <td><span id="arrow15"></span></td>
-                <td>15</td><td>480</td><td>192</td><td>288</td>
+                <td>15</td><td></td><td><span id="tax15"></span></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward15"></span></td>
@@ -273,6 +273,8 @@
             }
             for (let l = 11; l < {{ round_num|json }}+1; l++) {
                 document.getElementById('withdraw'+l).innerHTML = {{ withdraw_list|safe }}[l-1];
+                tax_num = Math.round({{ withdraw_list|safe }}[l-1]*0.4);
+                document.getElementById('tax'+l).innerHTML = tax_num;
             }
         });
     </script>

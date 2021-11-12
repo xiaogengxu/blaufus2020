@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-11 22:09+0200\n"
-"PO-Revision-Date: 2021-11-11 21:11+0200\n"
+"POT-Creation-Date: 2021-11-12 14:28+0200\n"
+"PO-Revision-Date: 2021-11-12 14:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -35,13 +35,13 @@ msgstr "Bitte entscheiden Sie, wie viel Sie sparen möchten."
 #: .\matching\templates\matching\Rest1.html:10
 #: .\matching\templates\matching\Rest2.html:10
 #: .\matching\templates\matching\Task.html:16
-msgid "life"
-msgstr "leben"
+msgid "Life"
+msgstr "Leben"
 
 #: .\matching\templates\matching\Decision1.html:16
-#: .\matching\templates\matching\Decision1.html:60
+#: .\matching\templates\matching\Decision1.html:67
 #: .\matching\templates\matching\Decision2.html:16
-#: .\matching\templates\matching\Decision2.html:60
+#: .\matching\templates\matching\Decision2.html:67
 #: .\matching\templates\matching\Rest1.html:10
 #: .\matching\templates\matching\Rest1.html:47
 #: .\matching\templates\matching\Rest2.html:10
@@ -64,7 +64,9 @@ msgstr ""
 "Punkten."
 
 #: .\matching\templates\matching\Decision1.html:28
+#: .\matching\templates\matching\Decision1.html:35
 #: .\matching\templates\matching\Decision2.html:28
+#: .\matching\templates\matching\Decision2.html:35
 #, python-format
 msgid ""
 "From Periods 1 to %(round_num_show)s, you have saved on average %(avg_list)s "
@@ -78,15 +80,26 @@ msgstr ""
 #, python-format
 msgid ""
 "If in the next working periods you maintain this level of savings,\n"
-"        your after-tax Payoff during the rest phase will be %(rest_points)s "
-"points per period."
+"        your Reward during the rest phase will be %(rest_points)s points per "
+"period."
 msgstr ""
 "Falls Sie diesen Betrag in den restlichen Perioden der Arbeitsphase sparen, "
 "werden Sie in der Ruhestandsphase %(rest_points)s Punkte pro Periode als "
 "Belohnung erhalten."
 
-#: .\matching\templates\matching\Decision1.html:34
-#: .\matching\templates\matching\Decision2.html:34
+#: .\matching\templates\matching\Decision1.html:37
+#: .\matching\templates\matching\Decision2.html:37
+#, python-format
+msgid ""
+"If in this period you maintain this level of savings,\n"
+"        your Reward during the rest phase will be %(rest_points)s points per "
+"period."
+msgstr ""
+"Falls Sie in dieser Periode gleich viel sparen, wird Ihre Belohnung während "
+"der Ruhestandsphase %(rest_points)s Punkte pro Periode sein."
+
+#: .\matching\templates\matching\Decision1.html:41
+#: .\matching\templates\matching\Decision2.html:41
 msgid ""
 "Please tap and move on the slider below to indicate how much you would like "
 "to save in current Period."
@@ -94,8 +107,8 @@ msgstr ""
 "Bitte bewegen Sie den Schieberegler, um anzugeben wie viele Punkte Sie in "
 "der aktuellen Periode sparen möchten."
 
-#: .\matching\templates\matching\Decision1.html:61
-#: .\matching\templates\matching\Decision2.html:61
+#: .\matching\templates\matching\Decision1.html:68
+#: .\matching\templates\matching\Decision2.html:68
 #: .\matching\templates\matching\Rest1.html:48
 #: .\matching\templates\matching\Rest2.html:48
 msgid ""
@@ -103,82 +116,82 @@ msgid ""
 "                    (gross)"
 msgstr "Lohn"
 
-#: .\matching\templates\matching\Decision1.html:64
-#: .\matching\templates\matching\Decision2.html:64
+#: .\matching\templates\matching\Decision1.html:71
+#: .\matching\templates\matching\Decision2.html:71
 #: .\matching\templates\matching\Rest1.html:51
 #: .\matching\templates\matching\Rest2.html:51
 msgid "Your wage in points"
 msgstr "Ihr Arbeitslohn in Punkten"
 
-#: .\matching\templates\matching\Decision1.html:68
-#: .\matching\templates\matching\Decision2.html:68
+#: .\matching\templates\matching\Decision1.html:75
+#: .\matching\templates\matching\Decision2.html:75
 #: .\matching\templates\matching\Rest1.html:55
 #: .\matching\templates\matching\Rest2.html:55
 #: .\matching\templates\matching\includes\tabs.html:11
 msgid "Tax"
 msgstr "Steuer"
 
-#: .\matching\templates\matching\Decision1.html:71
-#: .\matching\templates\matching\Decision2.html:71
+#: .\matching\templates\matching\Decision1.html:78
+#: .\matching\templates\matching\Decision2.html:78
 #: .\matching\templates\matching\Rest1.html:58
 #: .\matching\templates\matching\Rest2.html:58
 #, python-format
 msgid "40%% wage tax (in points) charged"
 msgstr "40%% von Ihrem Arbeitslohn"
 
-#: .\matching\templates\matching\Decision1.html:75
-#: .\matching\templates\matching\Decision2.html:75
+#: .\matching\templates\matching\Decision1.html:82
+#: .\matching\templates\matching\Decision2.html:82
 #: .\matching\templates\matching\Rest1.html:62
 #: .\matching\templates\matching\Rest2.html:62
 msgid "Net Wage"
 msgstr "Nettolohn"
 
-#: .\matching\templates\matching\Decision1.html:78
-#: .\matching\templates\matching\Decision2.html:78
+#: .\matching\templates\matching\Decision1.html:85
+#: .\matching\templates\matching\Decision2.html:85
 #: .\matching\templates\matching\Rest1.html:65
 #: .\matching\templates\matching\Rest2.html:65
 msgid "Wage (gross) minus Tax"
 msgstr "Arbeitslohn abzüglich Steuern"
 
-#: .\matching\templates\matching\Decision1.html:82
-#: .\matching\templates\matching\Decision2.html:82
+#: .\matching\templates\matching\Decision1.html:89
+#: .\matching\templates\matching\Decision2.html:89
 #: .\matching\templates\matching\Rest1.html:69
 #: .\matching\templates\matching\Rest2.html:69
 msgid "Savings Decision"
 msgstr "Sparbetrag"
 
-#: .\matching\templates\matching\Decision1.html:85
-#: .\matching\templates\matching\Decision2.html:85
+#: .\matching\templates\matching\Decision1.html:92
+#: .\matching\templates\matching\Decision2.html:92
 #: .\matching\templates\matching\Rest1.html:72
 #: .\matching\templates\matching\Rest2.html:72
 msgid "Your savings decision (in points)"
 msgstr "Punkte, die Sie in einer Periode sparen wollen"
 
-#: .\matching\templates\matching\Decision1.html:89
-#: .\matching\templates\matching\Decision2.html:89
+#: .\matching\templates\matching\Decision1.html:96
+#: .\matching\templates\matching\Decision2.html:96
 #: .\matching\templates\matching\Rest1.html:76
 #: .\matching\templates\matching\Rest2.html:76
 msgid "Bonus"
 msgstr "Bonus"
 
-#: .\matching\templates\matching\Decision1.html:92
-#: .\matching\templates\matching\Decision2.html:92
+#: .\matching\templates\matching\Decision1.html:99
+#: .\matching\templates\matching\Decision2.html:99
 #: .\matching\templates\matching\Rest1.html:79
 #: .\matching\templates\matching\Rest2.html:79
 #, python-format
 msgid ""
-"extra bonus (in points) added to your Savings Balance (66.67%% of Savings)"
+"Extra bonus (in points) added to your Savings Balance (66.67%% of Savings)"
 msgstr "Bonuspunkte (66.67%% vom Sparbetrag)"
 
-#: .\matching\templates\matching\Decision1.html:96
-#: .\matching\templates\matching\Decision2.html:96
+#: .\matching\templates\matching\Decision1.html:103
+#: .\matching\templates\matching\Decision2.html:103
 #: .\matching\templates\matching\Rest1.html:83
 #: .\matching\templates\matching\Rest2.html:83
 msgid "Payoff"
 msgstr "Belohnung"
 
-#: .\matching\templates\matching\Decision1.html:99
-#: .\matching\templates\matching\Decision2.html:99
+#: .\matching\templates\matching\Decision1.html:106
+#: .\matching\templates\matching\Decision2.html:106
 #: .\matching\templates\matching\Rest1.html:86
 #: .\matching\templates\matching\Rest2.html:86
 msgid "Reward (in points) in the period. It is equal to Net Wage – Savings"
@@ -186,15 +199,15 @@ msgstr ""
 "Belohnung (in Punkten) entspricht dem Nettolohn abzüglich der "
 "Sparentscheidung in der jeweiligen Periode"
 
-#: .\matching\templates\matching\Decision1.html:103
-#: .\matching\templates\matching\Decision2.html:103
+#: .\matching\templates\matching\Decision1.html:110
+#: .\matching\templates\matching\Decision2.html:110
 #: .\matching\templates\matching\Rest1.html:90
 #: .\matching\templates\matching\Rest2.html:90
 msgid "Savings Balance"
 msgstr "Ersparnisse"
 
-#: .\matching\templates\matching\Decision1.html:106
-#: .\matching\templates\matching\Decision2.html:106
+#: .\matching\templates\matching\Decision1.html:113
+#: .\matching\templates\matching\Decision2.html:113
 #: .\matching\templates\matching\Rest1.html:93
 #: .\matching\templates\matching\Rest2.html:93
 #, python-format
@@ -204,15 +217,15 @@ msgid ""
 "automatically)."
 msgstr "Gesparte Punkte gemäss Sparentscheidungen plus Bonus inkl. Zinsen"
 
-#: .\matching\templates\matching\Decision1.html:110
-#: .\matching\templates\matching\Decision2.html:110
+#: .\matching\templates\matching\Decision1.html:117
+#: .\matching\templates\matching\Decision2.html:117
 #: .\matching\templates\matching\Rest1.html:97
 #: .\matching\templates\matching\Rest2.html:97
 msgid "Withdraw"
 msgstr "Bezug"
 
-#: .\matching\templates\matching\Decision1.html:113
-#: .\matching\templates\matching\Decision2.html:113
+#: .\matching\templates\matching\Decision1.html:120
+#: .\matching\templates\matching\Decision2.html:120
 #: .\matching\templates\matching\Rest1.html:100
 #: .\matching\templates\matching\Rest2.html:100
 msgid "Points withdrawn from your Savings account during the rest phase."
@@ -239,8 +252,8 @@ msgid ""
 "        Your total Savings, bonus and accumulated interest are %(balance10)s "
 "points."
 msgstr ""
-"Die Arbeitsphase ist zu Ende. Sie haben Ersparnisse in der Höhe von %"
-"(balance10)s Punkten (inkl. Zinsen)."
+"Die Arbeitsphase ist zu Ende. Sie haben Ersparnisse in der Höhe von "
+"%(balance10)s Punkten (inkl. Zinsen)."
 
 #: .\matching\templates\matching\Rest1.html:23
 #: .\matching\templates\matching\Rest2.html:23
@@ -272,8 +285,8 @@ msgid ""
 "        Your total Savings, bonus and accumulated interest are %(balance25)s "
 "points."
 msgstr ""
-"Die Arbeitsphase ist zu Ende. Sie haben Ersparnisse in der Höhe von %"
-"(balance25)s Punkten (inkl. Zinsen)."
+"Die Arbeitsphase ist zu Ende. Sie haben Ersparnisse in der Höhe von "
+"%(balance25)s Punkten (inkl. Zinsen)."
 
 #: .\matching\templates\matching\Start.html:13
 msgid "Now you start the real experiment."
@@ -284,7 +297,7 @@ msgstr ""
 #: .\matching\templates\matching\Task.html:25
 #, python-format
 msgid ""
-"Set all five sliders below to number %(slide_moveto)s.\n"
+"Set all three sliders below to number %(slide_moveto)s.\n"
 "        Once you correctly positioned all sliders, click on \"Submit\" to "
 "collect your <b>Wage</b>."
 msgstr "Positionieren Sie alle Schieberegler auf die Zahl %(slide_moveto)s."
@@ -412,8 +425,8 @@ msgstr ""
 #: .\matching\templates\matching\includes\tabs.html:53
 #, python-format
 msgid ""
-"Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of 40%"
-"%."
+"Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of "
+"40%%."
 msgstr ""
 "Beim Bezug der Ersparnisse in der Ruhestandsphase werden Sie eine Steuer in "
 "Höhe von 40%% zahlen."

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-11 22:09+0200\n"
-"PO-Revision-Date: 2021-11-11 21:34+0200\n"
+"POT-Creation-Date: 2021-11-12 14:28+0200\n"
+"PO-Revision-Date: 2021-11-12 14:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgid "Trial life"
 msgstr "Proberunde Leben"
 
 #: .\trial_immediate\templates\trial_immediate\Decision.html:16
-#: .\trial_immediate\templates\trial_immediate\Decision.html:59
+#: .\trial_immediate\templates\trial_immediate\Decision.html:66
 #: .\trial_immediate\templates\trial_immediate\Rest.html:10
 #: .\trial_immediate\templates\trial_immediate\Rest.html:45
 #: .\trial_immediate\templates\trial_immediate\Task.html:16
@@ -56,6 +56,7 @@ msgstr ""
 "Punkten."
 
 #: .\trial_immediate\templates\trial_immediate\Decision.html:28
+#: .\trial_immediate\templates\trial_immediate\Decision.html:35
 #, python-format
 msgid ""
 "From Periods 1 to %(round_num_show)s, you have saved on average %(avg_list)s "
@@ -75,7 +76,17 @@ msgstr ""
 "werden Sie in der Ruhestandsphase %(rest_points)s Punkte pro Periode als "
 "Belohnung erhalten."
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:34
+#: .\trial_immediate\templates\trial_immediate\Decision.html:37
+#, python-format
+msgid ""
+"If in this period you maintain this level of savings,\n"
+"        your Reward during the rest phase will be %(rest_points)s points per "
+"period."
+msgstr ""
+"Falls Sie in dieser Periode gleich viel sparen, wird Ihre Belohnung während "
+"der Ruhestandsphase %(rest_points)s Punkte pro Periode sein."
+
+#: .\trial_immediate\templates\trial_immediate\Decision.html:41
 msgid ""
 "Please tap and move on the slider below to indicate how much you would like "
 "to save in current Period."
@@ -83,68 +94,68 @@ msgstr ""
 "Bitte bewegen Sie den Schieberegler, um anzugeben wie viele Punkte Sie in "
 "der aktuellen Periode sparen möchten."
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:60
+#: .\trial_immediate\templates\trial_immediate\Decision.html:67
 #: .\trial_immediate\templates\trial_immediate\Rest.html:46
 msgid ""
 "Wage\n"
 "                    (gross)"
 msgstr "Lohn"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:63
+#: .\trial_immediate\templates\trial_immediate\Decision.html:70
 #: .\trial_immediate\templates\trial_immediate\Rest.html:49
 msgid "Your wage in points"
 msgstr "Ihr Arbeitslohn in Punkten"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:67
+#: .\trial_immediate\templates\trial_immediate\Decision.html:74
 #: .\trial_immediate\templates\trial_immediate\Rest.html:53
 #: .\trial_immediate\templates\trial_immediate\includes\tabs.html:9
 msgid "Tax"
 msgstr "Steuer"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:70
+#: .\trial_immediate\templates\trial_immediate\Decision.html:77
 #: .\trial_immediate\templates\trial_immediate\Rest.html:56
 #, python-format
 msgid "40%% wage tax (in points) charged"
 msgstr "40%% von Ihrem Arbeitslohn"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:74
+#: .\trial_immediate\templates\trial_immediate\Decision.html:81
 #: .\trial_immediate\templates\trial_immediate\Rest.html:60
 msgid "Net Wage"
 msgstr "Nettolohn"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:77
+#: .\trial_immediate\templates\trial_immediate\Decision.html:84
 #: .\trial_immediate\templates\trial_immediate\Rest.html:63
 msgid "Wage (gross) minus Tax"
 msgstr "Arbeitslohn abzüglich Steuern"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:81
+#: .\trial_immediate\templates\trial_immediate\Decision.html:88
 #: .\trial_immediate\templates\trial_immediate\Rest.html:67
 msgid "Savings Decision"
 msgstr "Sparbetrag"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:84
+#: .\trial_immediate\templates\trial_immediate\Decision.html:91
 #: .\trial_immediate\templates\trial_immediate\Rest.html:70
 msgid "Your savings decision (in points)"
 msgstr "Punkte, die Sie in einer Periode sparen wollen"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:88
+#: .\trial_immediate\templates\trial_immediate\Decision.html:95
 #: .\trial_immediate\templates\trial_immediate\Rest.html:74
 msgid "Reward (in points)"
 msgstr "Belohnung (in Punkten)"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:91
+#: .\trial_immediate\templates\trial_immediate\Decision.html:98
 #: .\trial_immediate\templates\trial_immediate\Rest.html:77
 msgid "Reward (in points) in the period. It is equal to Net Wage – Savings"
 msgstr ""
 "Belohnung (in Punkten) entspricht dem Nettolohn abzüglich der "
 "Sparentscheidung in der jeweiligen Periode"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:95
+#: .\trial_immediate\templates\trial_immediate\Decision.html:102
 #: .\trial_immediate\templates\trial_immediate\Rest.html:81
 msgid "Savings Balance"
 msgstr "Ersparnisse"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:98
+#: .\trial_immediate\templates\trial_immediate\Decision.html:105
 #: .\trial_immediate\templates\trial_immediate\Rest.html:84
 #, python-format
 msgid ""
@@ -153,12 +164,12 @@ msgid ""
 "automatically)."
 msgstr "Gesparte Punkte gemäss Sparentscheidungen inkl. Zinsen"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:102
+#: .\trial_immediate\templates\trial_immediate\Decision.html:109
 #: .\trial_immediate\templates\trial_immediate\Rest.html:88
 msgid "Withdraw"
 msgstr "Bezug"
 
-#: .\trial_immediate\templates\trial_immediate\Decision.html:105
+#: .\trial_immediate\templates\trial_immediate\Decision.html:112
 #: .\trial_immediate\templates\trial_immediate\Rest.html:91
 msgid "Points withdrawn from your Savings account during the rest phase."
 msgstr "Bezogene Ersparnisse in der Ruhestandsphase"
@@ -205,8 +216,8 @@ msgid ""
 "You finished your working phase. Your total Savings and accumulated interest "
 "are %(balance10)s points."
 msgstr ""
-"Die Arbeitsphase ist zu Ende. Sie haben Ersparnisse in der Höhe von %"
-"(balance10)s Punkten (inkl. Zinsen)."
+"Die Arbeitsphase ist zu Ende. Sie haben Ersparnisse in der Höhe von "
+"%(balance10)s Punkten (inkl. Zinsen)."
 
 #: .\trial_immediate\templates\trial_immediate\Rest.html:22
 msgid ""
@@ -229,12 +240,14 @@ msgstr ""
 
 #: .\trial_immediate\templates\trial_immediate\Start.html:11
 msgid "Trial round"
-msgstr ""
+msgstr "Proberunde"
 
 #: .\trial_immediate\templates\trial_immediate\Start.html:14
 msgid ""
 "You will now play a trial life to get you familiarized with the experiment."
 msgstr ""
+"Sie werden jetzt ein Probelaufleben spielen, um sich mit dem Spiel vertraut "
+"zu machen."
 
 #: .\trial_immediate\templates\trial_immediate\Start.html:16
 msgid ""
@@ -242,6 +255,9 @@ msgid ""
 "        except that you will not earn any financial reward based on the "
 "results of this trial life."
 msgstr ""
+"Alles entspricht der Runde, die Sie spielen werden, außer dass Sie keine "
+"finanzielle Belohnung auf der Grundlage der Ergebnisse dieses Probelaufs "
+"erhalten."
 
 #: .\trial_immediate\templates\trial_immediate\Start.html:19
 msgid ""
@@ -249,11 +265,14 @@ msgid ""
 "        You can access the instructions clicking on the buttons at the "
 "bottom of the page."
 msgstr ""
+"Nutzen Sie diese Testrunde, um alle Funktionen des Spiels zu erkunden. Sie "
+"können die Anleitung jederzeit aufrufen, indem Sie auf die Schaltflächen "
+"unten auf der Seite klicken."
 
 #: .\trial_immediate\templates\trial_immediate\Task.html:25
 #, python-format
 msgid ""
-"Set all five sliders below to number %(slide_moveto)s.\n"
+"Set all three sliders below to number %(slide_moveto)s.\n"
 "        Once you correctly positioned all sliders, click on \"Submit\" to "
 "collect your <b>Wage</b>."
 msgstr "Positionieren Sie alle Schieberegler auf die Zahl %(slide_moveto)s."

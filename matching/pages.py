@@ -163,7 +163,7 @@ class Decision2(Page):
 
     def vars_for_template(self):
         round_num = self.player.round_number
-        round_num_show = self.player.round_number - 15
+        round_num_show = self.player.round_number - 16
         round_num_title = self.player.round_number - 15
         round_num_bar = 68 + (self.player.round_number - 16) * 2
         life = 2

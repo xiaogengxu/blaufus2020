@@ -24,10 +24,17 @@
 
     <p>{% blocktrans %}You completed your work task and earned a Wage of 480 points.{% endblocktrans %}</p>
 
-    <div id="show_p2">
+    <div id="show_p2a">
     <p>{% blocktrans %}From Periods 1 to {{ round_num_show }}, you have saved on average {{ avg_list }} points per period.{% endblocktrans %}</p>
 
     <p>{% blocktrans %}If in the next working periods you maintain this level of savings,
+        your Reward during the rest phase will be {{ rest_points }} points per period.{% endblocktrans %}</p>
+    </div>
+
+    <div id="show_p2b">
+    <p>{% blocktrans %}From Periods 1 to {{ round_num_show }}, you have saved on average {{ avg_list }} points per period.{% endblocktrans %}</p>
+
+    <p>{% blocktrans %}If in this period you maintain this level of savings,
         your after-tax Payoff during the rest phase will be {{ rest_points }} points per period.{% endblocktrans %}</p>
     </div>
 
@@ -207,7 +214,7 @@
             </tr>
             <tr>
                 <td><span id="arrow11"></span></td>
-                <td>11</td><td>480</td><td>192</td><td>288</td>
+                <td>11</td><td></td><td></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward11"></span></td>
@@ -216,7 +223,7 @@
             </tr>
             <tr>
                 <td><span id="arrow12"></span></td>
-                <td>12</td><td>480</td><td>192</td><td>288</td>
+                <td>12</td><td></td><td></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward12"></span></td>
@@ -225,7 +232,7 @@
             </tr>
             <tr>
                 <td><span id="arrow13"></span></td>
-                <td>13</td><td>480</td><td>192</td><td>288</td>
+                <td>13</td><td></td><td></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward13"></span></td>
@@ -234,7 +241,7 @@
             </tr>
             <tr>
                 <td><span id="arrow14"></span></td>
-                <td>14</td><td>480</td><td>192</td><td>288</td>
+                <td>14</td><td></td><td></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward14"></span></td>
@@ -243,7 +250,7 @@
             </tr>
             <tr>
                 <td><span id="arrow15"></span></td>
-                <td>15</td><td>480</td><td>192</td><td>288</td>
+                <td>15</td><td></td><td></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward15"></span></td>
@@ -268,8 +275,15 @@
     <script>
         // Show the forward information only for period 2-9.
         period = {{ round_num|json }};
-        if (period === 1 || period === 10) {
-            document.getElementById('show_p2').style.display = 'none';
+        if (period === 1) {
+            document.getElementById('show_p2a').style.display = 'none';
+            document.getElementById('show_p2b').style.display = 'none';
+        }
+        if (period > 1 && period < 10) {
+            document.getElementById('show_p2b').style.display = 'none';
+        }
+        if (period === 10) {
+            document.getElementById('show_p2a').style.display = 'none';
         }
         // Show arrow for the current period
         document.getElementById('arrow{{ round_num|json }}').innerHTML = '&#10146;';

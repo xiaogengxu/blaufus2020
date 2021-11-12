@@ -22,7 +22,7 @@ class Quiz(Page):
 
     def quiz2_choices(player):
         choices = [['work', _('How much to work')], ['save', _('How much to save')],
-                   ['no_decision', _('I make no decision during working phase.')]]
+                   ['no_decision', _('I make no decision during rest phase.')]]
         random.shuffle(choices)
         return choices
 
@@ -121,7 +121,7 @@ class Quiz_retry(Page):
 
     def quiz2_choices(player):
         choices = [['work', _('How much to work')], ['save', _('How much to save')],
-                   ['no_decision', _('I make no decision during working phase.')]]
+                   ['no_decision', _('I make no decision during rest phase.')]]
         random.shuffle(choices)
         return choices
 

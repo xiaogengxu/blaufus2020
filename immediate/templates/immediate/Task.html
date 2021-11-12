@@ -13,7 +13,7 @@
 
     <h3>
     <br>
-    {% blocktrans %}life{% endblocktrans %} {{ life }}: {% blocktrans %}Period{% endblocktrans %} {{ round_num_title }}/15 ({% blocktrans %}working phase{% endblocktrans %})
+    {% blocktrans %}Life{% endblocktrans %} {{ life }}: {% blocktrans %}Period{% endblocktrans %} {{ round_num_title }}/15 ({% blocktrans %}working phase{% endblocktrans %})
     </h3>
 
     {% if form.errors %}
@@ -22,7 +22,7 @@
         </div>
     {% endif %}
 
-    <p>{% blocktrans %}Set all five sliders below to number {{ slide_moveto }}.
+    <p>{% blocktrans %}Set all three sliders below to number {{ slide_moveto }}.
         Once you correctly positioned all sliders, click on "Submit" to collect your <b>Wage</b>.{% endblocktrans %}</p>
 
     <input type="hidden" value="" id="myRange_spend1"/>
@@ -222,10 +222,10 @@
             margin-left: 50px;
         }
         #div2 {
-            margin-left: 90px;
+            margin-left: 200px;
         }
         #div3 {
-            margin-left: 70px;
+            margin-left: 100px;
         }
     </style>
 

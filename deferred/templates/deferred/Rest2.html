@@ -7,7 +7,7 @@
 {% block content %}
     <h3>
     <br>
-    {% blocktrans %}life{% endblocktrans %} {{ life }}: {% blocktrans %}Period{% endblocktrans %} {{ round_num_title }}/15 ({% blocktrans %}rest phase{% endblocktrans %})
+    {% blocktrans %}Life{% endblocktrans %} {{ life }}: {% blocktrans %}Period{% endblocktrans %} {{ round_num_title }}/15 ({% blocktrans %}rest phase{% endblocktrans %})
     </h3>
 
     {% if form.errors %}
@@ -193,7 +193,7 @@
             </tr>
             <tr>
                 <td><span id="arrow26"></span></td>
-                <td>11</td><td>480</td><td>192</td><td>288</td>
+                <td>11</td><td></td><td><span id="tax26"></span></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward26"></span></td>
@@ -202,7 +202,7 @@
             </tr>
             <tr>
                 <td><span id="arrow27"></span></td>
-                <td>12</td><td>480</td><td>192</td><td>288</td>
+                <td>12</td><td></td><td><span id="tax27"></span></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward27"></span></td>
@@ -211,7 +211,7 @@
             </tr>
             <tr>
                 <td><span id="arrow28"></span></td>
-                <td>13</td><td>480</td><td>192</td><td>288</td>
+                <td>13</td><td></td><td><span id="tax28"></span></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward28"></span></td>
@@ -220,7 +220,7 @@
             </tr>
             <tr>
                 <td><span id="arrow29"></span></td>
-                <td>14</td><td>480</td><td>192</td><td>288</td>
+                <td>14</td><td></td><td><span id="tax29"></span></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward29"></span></td>
@@ -229,7 +229,7 @@
             </tr>
             <tr>
                 <td><span id="arrow30"></span></td>
-                <td>15</td><td>480</td><td>192</td><td>288</td>
+                <td>15</td><td></td><td><span id="tax30"></span></td><td></td>
                 <td></td>
                 <td></td>
                 <td><span id="reward30"></span></td>
@@ -272,6 +272,8 @@
             }
             for (let l = 26; l < {{ round_num|json }}+1; l++) {
                 document.getElementById('withdraw'+l).innerHTML = {{ withdraw_list|safe }}[l-16];
+                tax_num = Math.round({{ withdraw_list|safe }}[l-16]*0.4);
+                document.getElementById('tax'+l).innerHTML = tax_num;
             }
         });
     </script>

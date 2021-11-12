@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-11 22:09+0200\n"
-"PO-Revision-Date: 2021-11-11 22:16+0200\n"
+"POT-Creation-Date: 2021-11-12 14:28+0200\n"
+"PO-Revision-Date: 2021-11-12 14:20+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -48,10 +48,13 @@ msgstr "Ich bestimme meine Arbeitszeit"
 msgid "How much to save"
 msgstr "Ich bestimme wie viel ich sparen möchte"
 
-#: .\quiz\pages.py:19 .\quiz\pages.py:25 .\quiz\pages.py:118
-#: .\quiz\pages.py:124
+#: .\quiz\pages.py:19 .\quiz\pages.py:118
 msgid "I make no decision during working phase."
 msgstr "Während der Arbeitsphase treffe ich keine Entscheidungen."
+
+#: .\quiz\pages.py:25 .\quiz\pages.py:124
+msgid "I make no decision during rest phase."
+msgstr "Während der Ruhestandsphase treffe ich keine Entscheidungen"
 
 #: .\quiz\pages.py:37 .\quiz\pages.py:136
 msgid "My Savings are lost."
@@ -376,8 +379,8 @@ msgstr ""
 #: .\quiz\templates\quiz\includes\tabs_matching.html:53
 #, python-format
 msgid ""
-"Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of "
-"40%%."
+"Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of 40%"
+"%."
 msgstr ""
 "Beim Bezug der Ersparnisse in der Ruhestandsphase werden Sie eine Steuer in "
 "Höhe von 40%% zahlen."

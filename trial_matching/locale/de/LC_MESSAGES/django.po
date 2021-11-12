@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-11 22:09+0200\n"
-"PO-Revision-Date: 2021-11-11 21:45+0200\n"
+"POT-Creation-Date: 2021-11-12 14:28+0200\n"
+"PO-Revision-Date: 2021-11-12 14:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgid "Trial life"
 msgstr "Proberunde Leben"
 
 #: .\trial_matching\templates\trial_matching\Decision.html:16
-#: .\trial_matching\templates\trial_matching\Decision.html:60
+#: .\trial_matching\templates\trial_matching\Decision.html:67
 #: .\trial_matching\templates\trial_matching\Rest.html:10
 #: .\trial_matching\templates\trial_matching\Rest.html:47
 #: .\trial_matching\templates\trial_matching\Task.html:16
@@ -56,6 +56,7 @@ msgstr ""
 "Punkten."
 
 #: .\trial_matching\templates\trial_matching\Decision.html:28
+#: .\trial_matching\templates\trial_matching\Decision.html:35
 #, python-format
 msgid ""
 "From Periods 1 to %(round_num_show)s, you have saved on average %(avg_list)s "
@@ -68,14 +69,24 @@ msgstr ""
 #, python-format
 msgid ""
 "If in the next working periods you maintain this level of savings,\n"
-"        your after-tax Payoff during the rest phase will be %(rest_points)s "
-"points per period."
+"        your Reward during the rest phase will be %(rest_points)s points per "
+"period."
 msgstr ""
 "Falls Sie diesen Betrag in den restlichen Perioden der Arbeitsphase sparen, "
 "werden Sie in der Ruhestandsphase %(rest_points)s Punkte pro Periode als "
 "Belohnung erhalten."
 
-#: .\trial_matching\templates\trial_matching\Decision.html:34
+#: .\trial_matching\templates\trial_matching\Decision.html:37
+#, python-format
+msgid ""
+"If in this period you maintain this level of savings,\n"
+"        your Reward during the rest phase will be %(rest_points)s points per "
+"period."
+msgstr ""
+"Falls Sie in dieser Periode gleich viel sparen, wird Ihre Belohnung während "
+"der Ruhestandsphase %(rest_points)s Punkte pro Periode sein."
+
+#: .\trial_matching\templates\trial_matching\Decision.html:41
 msgid ""
 "Please tap and move on the slider below to indicate how much you would like "
 "to save in current Period."
@@ -83,80 +94,80 @@ msgstr ""
 "Bitte bewegen Sie den Schieberegler, um anzugeben wie viele Punkte Sie in "
 "der aktuellen Periode sparen möchten."
 
-#: .\trial_matching\templates\trial_matching\Decision.html:61
+#: .\trial_matching\templates\trial_matching\Decision.html:68
 #: .\trial_matching\templates\trial_matching\Rest.html:48
 msgid ""
 "Wage\n"
 "                    (gross)"
 msgstr "Lohn"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:64
+#: .\trial_matching\templates\trial_matching\Decision.html:71
 #: .\trial_matching\templates\trial_matching\Rest.html:51
 msgid "Your wage in points"
 msgstr "Ihr Arbeitslohn in Punkten"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:68
+#: .\trial_matching\templates\trial_matching\Decision.html:75
 #: .\trial_matching\templates\trial_matching\Rest.html:55
 #: .\trial_matching\templates\trial_matching\includes\tabs.html:11
 msgid "Tax"
 msgstr "Steuer"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:71
+#: .\trial_matching\templates\trial_matching\Decision.html:78
 #: .\trial_matching\templates\trial_matching\Rest.html:58
 #, python-format
 msgid "40%% wage tax (in points) charged"
 msgstr "40%% von Ihrem Arbeitslohn"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:75
+#: .\trial_matching\templates\trial_matching\Decision.html:82
 #: .\trial_matching\templates\trial_matching\Rest.html:62
 msgid "Net Wage"
 msgstr "Nettolohn"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:78
+#: .\trial_matching\templates\trial_matching\Decision.html:85
 #: .\trial_matching\templates\trial_matching\Rest.html:65
 msgid "Wage (gross) minus Tax"
 msgstr "Arbeitslohn abzüglich Steuern"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:82
+#: .\trial_matching\templates\trial_matching\Decision.html:89
 #: .\trial_matching\templates\trial_matching\Rest.html:69
 msgid "Savings Decision"
 msgstr "Sparbetrag"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:85
+#: .\trial_matching\templates\trial_matching\Decision.html:92
 #: .\trial_matching\templates\trial_matching\Rest.html:72
 msgid "Your savings decision (in points)"
 msgstr "Punkte, die Sie in einer Periode sparen wollen"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:89
+#: .\trial_matching\templates\trial_matching\Decision.html:96
 #: .\trial_matching\templates\trial_matching\Rest.html:76
 msgid "Bonus"
 msgstr "Bonus"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:92
+#: .\trial_matching\templates\trial_matching\Decision.html:99
 #: .\trial_matching\templates\trial_matching\Rest.html:79
 #, python-format
 msgid ""
-"extra bonus (in points) added to your Savings Balance (66.67%% of Savings)"
+"Extra bonus (in points) added to your Savings Balance (66.67%% of Savings)"
 msgstr "Bonuspunkte (66.67%% vom Sparbetrag)"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:96
+#: .\trial_matching\templates\trial_matching\Decision.html:103
 #: .\trial_matching\templates\trial_matching\Rest.html:83
 msgid "Payoff"
 msgstr "Belohnung"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:99
+#: .\trial_matching\templates\trial_matching\Decision.html:106
 #: .\trial_matching\templates\trial_matching\Rest.html:86
 msgid "Reward (in points) in the period. It is equal to Net Wage – Savings"
 msgstr ""
 "Belohnung (in Punkten) entspricht dem Nettolohn abzüglich der "
 "Sparentscheidung in der jeweiligen Periode"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:103
+#: .\trial_matching\templates\trial_matching\Decision.html:110
 #: .\trial_matching\templates\trial_matching\Rest.html:90
 msgid "Savings Balance"
 msgstr "Ersparnisse"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:106
+#: .\trial_matching\templates\trial_matching\Decision.html:113
 #: .\trial_matching\templates\trial_matching\Rest.html:93
 #, python-format
 msgid ""
@@ -165,12 +176,12 @@ msgid ""
 "automatically)."
 msgstr "Gesparte Punkte gemäss Sparentscheidungen plus Bonus inkl. Zinsen"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:110
+#: .\trial_matching\templates\trial_matching\Decision.html:117
 #: .\trial_matching\templates\trial_matching\Rest.html:97
 msgid "Withdraw"
 msgstr "Bezug"
 
-#: .\trial_matching\templates\trial_matching\Decision.html:113
+#: .\trial_matching\templates\trial_matching\Decision.html:120
 #: .\trial_matching\templates\trial_matching\Rest.html:100
 msgid "Points withdrawn from your Savings account during the rest phase."
 msgstr "Bezogene Ersparnisse in der Ruhestandsphase"
@@ -218,8 +229,8 @@ msgid ""
 "        Your total Savings, bonus and accumulated interest are %(balance10)s "
 "points."
 msgstr ""
-"Die Arbeitsphase ist zu Ende. Sie haben Ersparnisse in der Höhe von %"
-"(balance10)s Punkten (inkl. Zinsen)."
+"Die Arbeitsphase ist zu Ende. Sie haben Ersparnisse in der Höhe von "
+"%(balance10)s Punkten (inkl. Zinsen)."
 
 #: .\trial_matching\templates\trial_matching\Rest.html:23
 #, python-format
@@ -276,7 +287,7 @@ msgstr ""
 #: .\trial_matching\templates\trial_matching\Task.html:25
 #, python-format
 msgid ""
-"Set all five sliders below to number %(slide_moveto)s.\n"
+"Set all three sliders below to number %(slide_moveto)s.\n"
 "        Once you correctly positioned all sliders, click on \"Submit\" to "
 "collect your <b>Wage</b>."
 msgstr "Positionieren Sie alle Schieberegler auf die Zahl %(slide_moveto)s."
@@ -404,8 +415,8 @@ msgstr ""
 #: .\trial_matching\templates\trial_matching\includes\tabs.html:53
 #, python-format
 msgid ""
-"Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of 40%"
-"%."
+"Savings <b>Withdraws</b> in the <b>rest phase</b> are subject to a tax of "
+"40%%."
 msgstr ""
 "Beim Bezug der Ersparnisse in der Ruhestandsphase werden Sie eine Steuer in "
 "Höhe von 40%% zahlen."
