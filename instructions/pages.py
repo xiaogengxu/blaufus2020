@@ -45,41 +45,50 @@ class Instruct0(Page):
         start_datetime = datetime.datetime.now()
         self.participant.vars['start_time'] = start_datetime
 
+    def is_displayed(self):
+        return self.participant.vars['consent'] == 'yes'
+
 
 class Instruct1(Page):
     form_model = 'player'
 
+    def is_displayed(self):
+        return self.participant.vars['consent'] == 'yes'
+
 
 class Instruct2(Page):
     form_model = 'player'
+
+    def is_displayed(self):
+        return self.participant.vars['consent'] == 'yes'
 
 
 class Instruct3_immediate(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['treatment'] == 'immediate'
+        return self.participant.vars['consent'] == 'yes' and self.participant.vars['treatment'] == 'immediate'
 
 
 class Instruct3_deferred(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['treatment'] == 'deferred'
+        return self.participant.vars['consent'] == 'yes' and self.participant.vars['treatment'] == 'deferred'
 
 
 class Instruct3_matching(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['treatment'] == 'matching'
+        return self.participant.vars['consent'] == 'yes' and self.participant.vars['treatment'] == 'matching'
 
 
 class Instruct4_immediate(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['treatment'] == 'immediate'
+        return self.participant.vars['consent'] == 'yes' and self.participant.vars['treatment'] == 'immediate'
 
     def before_next_page(self):
         end_datetime = datetime.datetime.now()
@@ -92,7 +101,7 @@ class Instruct4_deferred(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['treatment'] == 'deferred'
+        return self.participant.vars['consent'] == 'yes' and self.participant.vars['treatment'] == 'deferred'
 
     def before_next_page(self):
         end_datetime = datetime.datetime.now()
@@ -105,7 +114,7 @@ class Instruct4_matching(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['treatment'] == 'matching'
+        return self.participant.vars['consent'] == 'yes' and self.participant.vars['treatment'] == 'matching'
 
     def before_next_page(self):
         end_datetime = datetime.datetime.now()

@@ -358,11 +358,15 @@ class End(Page):
                get_timeout_seconds(self.player) > 3
 
     def vars_for_template(self):
+        round_num = self.player.round_number
         if self.player.round_number == 15:
             life = 1
         else:
             life = 2
-        return {'life': life}
+        return {
+            'round_num': round_num,
+            'life': life
+        }
 
 
 page_sequence = [Start, Task, Decision1, Decision2, Rest1, Rest2, End]
