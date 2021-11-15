@@ -28,7 +28,7 @@ class Intro(Page):
 
     def js_vars(self):
         username_value = self.participant.label
-        return dict(url='https://survey.maximiles.com/screenout?p=73953&m='+username_value)
+        return dict(url='https://survey.maximiles.com/screenout?p=73954&m='+username_value)
 
     def before_next_page(self):
         if self.player.consent == 'no':
@@ -131,7 +131,7 @@ class End_instruct(Page):
 
     def js_vars(self):
         username_value = self.participant.label
-        return dict(url='https://survey.maximiles.com/quality?p=73953&m='+username_value)
+        return dict(url='https://survey.maximiles.com/quality?p=73954&m='+username_value)
 
 
 page_sequence = [Lang, Intro, Instruct0, Instruct1, Instruct2, Instruct3_immediate, Instruct3_deferred,

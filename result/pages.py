@@ -119,7 +119,7 @@ class Result(Page):
 
     def js_vars(self):
         username_value = self.participant.label
-        return dict(url='https://survey.maximiles.com/complete?p=73953_ec88ce84&m='+username_value)
+        return dict(url='https://survey.maximiles.com/complete?p=73954_59724ae7&m='+username_value)
 
 
 class Result_nodelay(Page):
@@ -208,7 +208,7 @@ class Result_nodelay(Page):
 
     def js_vars(self):
         username_value = self.participant.label
-        return dict(url='https://survey.maximiles.com/complete?p=73953_ec88ce84&m='+username_value)
+        return dict(url='https://survey.maximiles.com/complete?p=73954_59724ae7&m='+username_value)
 
 
 class Timeout(Page):
@@ -220,7 +220,7 @@ class Timeout(Page):
 
     def js_vars(self):
         username_value = self.participant.label
-        return dict(url='https://survey.maximiles.com/quality?p=73953&m='+username_value)
+        return dict(url='https://survey.maximiles.com/quality?p=73954&m='+username_value)
 
 
 page_sequence = [Result, Result_nodelay, Timeout]

@@ -12,7 +12,7 @@ class Start(Page):
     form_model = 'player'
 
     def is_displayed(self):
-        return self.participant.vars['time_instruction'] >= 30 & self.player.round_number == 1 and \
+        return self.participant.vars['time_instruction'] >= 30 and self.player.round_number == 1 and \
                self.participant.vars['consent'] == 'yes'
 
 
