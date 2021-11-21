@@ -1,3 +1,4 @@
+#oTreeCodeReview
 from os import environ
 
 
@@ -37,6 +38,8 @@ ROOMS = [
         participant_label_file='_rooms/econ101.txt',
     ),
     dict(name='game', display_name='Room for live demo (no participant labels)'),
+    dict(name='game2', display_name='Room2 for live demo (no participant labels)'),
+    dict(name='game3', display_name='Room3 for live demo (no participant labels)'),
 ]
 
 ADMIN_USERNAME = 'admin'
